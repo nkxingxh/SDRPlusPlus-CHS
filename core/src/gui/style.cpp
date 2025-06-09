@@ -30,6 +30,7 @@ namespace style {
         ImFontGlyphRangesBuilder baseBuilder;
         baseBuilder.AddRanges(fonts->GetGlyphRangesDefault());
         baseBuilder.AddRanges(fonts->GetGlyphRangesCyrillic());
+        baseBuilder.AddRanges(fonts->GetGlyphRangesChineseFull());
         baseBuilder.BuildRanges(&baseRanges);
 
         // Create big font range
@@ -45,9 +46,9 @@ namespace style {
         hugeBuilder.BuildRanges(&hugeRanges);
         
         // Add bigger fonts for frequency select and title
-        baseFont = fonts->AddFontFromFileTTF(((std::string)(resDir + "/fonts/Roboto-Medium.ttf")).c_str(), 16.0f * uiScale, NULL, baseRanges.Data);
-        bigFont = fonts->AddFontFromFileTTF(((std::string)(resDir + "/fonts/Roboto-Medium.ttf")).c_str(), 45.0f * uiScale, NULL, bigRanges.Data);
-        hugeFont = fonts->AddFontFromFileTTF(((std::string)(resDir + "/fonts/Roboto-Medium.ttf")).c_str(), 128.0f * uiScale, NULL, hugeRanges.Data);
+        baseFont = fonts->AddFontFromFileTTF(((std::string)(resDir + "/fonts/LXGWWenKaiGB-Regular.ttf")).c_str(), 16.0f * uiScale, NULL, baseRanges.Data);
+        bigFont = fonts->AddFontFromFileTTF(((std::string)(resDir + "/fonts/LXGWWenKaiGB-Regular.ttf")).c_str(), 45.0f * uiScale, NULL, bigRanges.Data);
+        hugeFont = fonts->AddFontFromFileTTF(((std::string)(resDir + "/fonts/LXGWWenKaiGB-Regular.ttf")).c_str(), 128.0f * uiScale, NULL, hugeRanges.Data);
 
         return true;
     }
