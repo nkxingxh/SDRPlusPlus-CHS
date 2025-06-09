@@ -62,12 +62,12 @@ public:
         config.release();
         select(device);
         
-        sigpath::sourceManager.registerSource("Audio", &handler);
+        sigpath::sourceManager.registerSource("音频", &handler);
     }
 
     ~AudioSourceModule() {
         stop(this);
-        sigpath::sourceManager.unregisterSource("Audio");
+        sigpath::sourceManager.unregisterSource("音频");
     }
 
     void postInit() {}

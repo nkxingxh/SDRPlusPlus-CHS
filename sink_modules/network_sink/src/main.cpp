@@ -311,12 +311,12 @@ public:
         provider.create = create_sink;
         provider.ctx = this;
 
-        sigpath::sinkManager.registerSinkProvider("Network", provider);
+        sigpath::sinkManager.registerSinkProvider("网络", provider);
     }
 
     ~NetworkSinkModule() {
         // Unregister sink, this will automatically stop and delete all instances of the audio sink
-        sigpath::sinkManager.unregisterSinkProvider("Network");
+        sigpath::sinkManager.unregisterSinkProvider("网络");
     }
 
     void postInit() {}

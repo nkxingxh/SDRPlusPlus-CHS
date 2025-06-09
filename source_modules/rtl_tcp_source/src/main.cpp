@@ -248,7 +248,7 @@ private:
             config.release(true);
         }
 
-        if (SmGui::Checkbox(CONCAT("Offset Tuning##_biast_select_", _this->name), &_this->offsetTuning)) {
+        if (SmGui::Checkbox(CONCAT("偏移调谐##_biast_select_", _this->name), &_this->offsetTuning)) {
             if (_this->running) {
                 _this->client->setOffsetTuning(_this->offsetTuning);
             }
@@ -257,7 +257,7 @@ private:
             config.release(true);
         }
 
-        if (SmGui::Checkbox("RTL AGC", &_this->rtlAGC)) {
+        if (SmGui::Checkbox("RTL AGC (自动增益)", &_this->rtlAGC)) {
             if (_this->running) {
                 _this->client->setAGCMode(_this->rtlAGC);
                 if (!_this->rtlAGC) {
@@ -270,7 +270,7 @@ private:
         }
 
         SmGui::ForceSync();
-        if (SmGui::Checkbox("Tuner AGC", &_this->tunerAGC)) {
+        if (SmGui::Checkbox("Tuner AGC (调谐器增益)", &_this->tunerAGC)) {
             if (_this->running) {
                 _this->client->setGainMode(!_this->tunerAGC);
                 if (!_this->tunerAGC) {

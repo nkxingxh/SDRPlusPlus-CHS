@@ -112,7 +112,7 @@ namespace demod {
                 _config->conf[name][getName()]["lowPass"] = _lowPass;
                 _config->release(true);
             }
-            if (ImGui::Checkbox(("Decode RDS##_radio_wfm_rds_" + name).c_str(), &_rds)) {
+            if (ImGui::Checkbox(("解码 RDS##_radio_wfm_rds_" + name).c_str(), &_rds)) {
                 demod.setRDSOut(_rds);
                 _config->acquire();
                 _config->conf[name][getName()]["rds"] = _rds;
@@ -121,7 +121,7 @@ namespace demod {
 
             // TODO: This might break when the entire radio module is disabled
             if (!_rds) { ImGui::BeginDisabled(); }
-            if (ImGui::Checkbox(("Advanced RDS Info##_radio_wfm_rds_info_" + name).c_str(), &_rdsInfo)) {
+            if (ImGui::Checkbox(("高级 RDS 信息##_radio_wfm_rds_info_" + name).c_str(), &_rdsInfo)) {
                 setAdvancedRds(_rdsInfo);
                 _config->acquire();
                 _config->conf[name][getName()]["rdsInfo"] = _rdsInfo;

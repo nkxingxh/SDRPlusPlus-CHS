@@ -550,7 +550,7 @@ private:
         }
 
         // Bias T
-        if (SmGui::Checkbox(CONCAT("Bias T##_airspy_", _this->name), &_this->biasT)) {
+        if (SmGui::Checkbox(CONCAT("Bias T (直流馈电)##_airspy_", _this->name), &_this->biasT)) {
             if (_this->running) {
                 airspy_set_rf_bias(_this->openDev, _this->biasT);
             }

@@ -71,8 +71,8 @@ void MainWindow::init() {
     }
 
     gui::menu.registerEntry("信号源", sourcemenu::draw, NULL);
-    gui::menu.registerEntry("Sinks", sinkmenu::draw, NULL);
-    gui::menu.registerEntry("Band Plan", bandplanmenu::draw, NULL);
+    gui::menu.registerEntry("输出", sinkmenu::draw, NULL);
+    gui::menu.registerEntry("频段划分", bandplanmenu::draw, NULL);
     gui::menu.registerEntry("Display", displaymenu::draw, NULL);
     gui::menu.registerEntry("Theme", thememenu::draw, NULL);
     gui::menu.registerEntry("VFO Color", vfo_color_menu::draw, NULL);

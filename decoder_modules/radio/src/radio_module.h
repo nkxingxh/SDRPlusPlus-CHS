@@ -262,7 +262,7 @@ private:
 
         // FM IF Noise Reduction
         if (_this->FMIFNRAllowed) {
-            if (ImGui::Checkbox(("IF Noise Reduction##_radio_fmifnr_ena_" + _this->name).c_str(), &_this->FMIFNREnabled)) {
+            if (ImGui::Checkbox(("中频噪声抑制##_radio_fmifnr_ena_" + _this->name).c_str(), &_this->FMIFNREnabled)) {
                 _this->setFMIFNREnabled(_this->FMIFNREnabled);
             }
             if (_this->selectedDemodID == RADIO_DEMOD_NFM) {

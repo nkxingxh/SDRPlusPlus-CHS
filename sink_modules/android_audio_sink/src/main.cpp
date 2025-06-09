@@ -140,12 +140,12 @@ public:
         provider.create = create_sink;
         provider.ctx = this;
 
-        sigpath::sinkManager.registerSinkProvider("Audio", provider);
+        sigpath::sinkManager.registerSinkProvider("音频", provider);
     }
 
     ~AudioSinkModule() {
         // Unregister sink, this will automatically stop and delete all instances of the audio sink
-        sigpath::sinkManager.unregisterSinkProvider("Audio");
+        sigpath::sinkManager.unregisterSinkProvider("音频");
     }
 
     void postInit() {}

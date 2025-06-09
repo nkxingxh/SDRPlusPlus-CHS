@@ -97,12 +97,12 @@ public:
         protoId = protocols.valueId(proto);
         sampTypeId = sampleTypes.valueId(sampType);
 
-        sigpath::sourceManager.registerSource("Network", &handler);
+        sigpath::sourceManager.registerSource("网络", &handler);
     }
 
     ~NetworkSourceModule() {
         stop(this);
-        sigpath::sourceManager.unregisterSource("Network");
+        sigpath::sourceManager.unregisterSource("网络");
     }
 
     void postInit() {}

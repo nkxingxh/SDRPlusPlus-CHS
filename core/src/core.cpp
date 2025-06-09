@@ -144,7 +144,7 @@ int sdrpp_main(int argc, char* argv[]) {
     defConfig["menuElements"][2]["name"] = "录制";
     defConfig["menuElements"][2]["open"] = true;
 
-    defConfig["menuElements"][3]["name"] = "Sinks";
+    defConfig["menuElements"][3]["name"] = "输出";
     defConfig["menuElements"][3]["open"] = true;
 
     defConfig["menuElements"][4]["name"] = "Frequency Manager";
@@ -153,7 +153,7 @@ int sdrpp_main(int argc, char* argv[]) {
     defConfig["menuElements"][5]["name"] = "VFO Color";
     defConfig["menuElements"][5]["open"] = true;
 
-    defConfig["menuElements"][6]["name"] = "Band Plan";
+    defConfig["menuElements"][6]["name"] = "频段划分";
     defConfig["menuElements"][6]["open"] = true;
 
     defConfig["menuElements"][7]["name"] = "Display";
@@ -249,7 +249,7 @@ int sdrpp_main(int argc, char* argv[]) {
     defConfig["invertIQ"] = false;
 
     defConfig["streams"]["电台"]["muted"] = false;
-    defConfig["streams"]["电台"]["sink"] = "Audio";
+    defConfig["streams"]["电台"]["sink"] = "音频";
     defConfig["streams"]["电台"]["volume"] = 1.0f;
 
     defConfig["windowSize"]["h"] = 720;

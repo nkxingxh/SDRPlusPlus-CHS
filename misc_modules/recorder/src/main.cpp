@@ -233,14 +233,14 @@ private:
         if (_this->recording) { style::beginDisabled(); }
         ImGui::BeginGroup();
         ImGui::Columns(2, CONCAT("RecorderModeColumns##_", _this->name), false);
-        if (ImGui::RadioButton(CONCAT("Baseband##_recorder_mode_", _this->name), _this->recMode == RECORDER_MODE_BASEBAND)) {
+        if (ImGui::RadioButton(CONCAT("基带##_recorder_mode_", _this->name), _this->recMode == RECORDER_MODE_BASEBAND)) {
             _this->recMode = RECORDER_MODE_BASEBAND;
             config.acquire();
             config.conf[_this->name]["mode"] = _this->recMode;
             config.release(true);
         }
         ImGui::NextColumn();
-        if (ImGui::RadioButton(CONCAT("Audio##_recorder_mode_", _this->name), _this->recMode == RECORDER_MODE_AUDIO)) {
+        if (ImGui::RadioButton(CONCAT("音频##_recorder_mode_", _this->name), _this->recMode == RECORDER_MODE_AUDIO)) {
             _this->recMode = RECORDER_MODE_AUDIO;
             config.acquire();
             config.conf[_this->name]["mode"] = _this->recMode;
@@ -258,7 +258,7 @@ private:
             }
         }
 
-        ImGui::LeftLabel("Name template");
+        ImGui::LeftLabel("名称模板");
         ImGui::FillWidth();
         if (ImGui::InputText(CONCAT("##_recorder_name_template_", _this->name), _this->nameTemplate, 1023)) {
             config.acquire();
@@ -266,7 +266,7 @@ private:
             config.release(true);
         }
 
-        ImGui::LeftLabel("Container");
+        ImGui::LeftLabel("容器格式");
         ImGui::FillWidth();
         if (ImGui::Combo(CONCAT("##_recorder_container_", _this->name), &_this->containerId, _this->containers.txt)) {
             config.acquire();
@@ -274,7 +274,7 @@ private:
             config.release(true);
         }
 
-        ImGui::LeftLabel("Sample type");
+        ImGui::LeftLabel("采样类型");
         ImGui::FillWidth();
         if (ImGui::Combo(CONCAT("##_recorder_st_", _this->name), &_this->sampleTypeId, _this->sampleTypes.txt)) {
             config.acquire();
@@ -287,7 +287,7 @@ private:
         // Show additional audio options
         if (_this->recMode == RECORDER_MODE_AUDIO) {
             if (_this->recording) { style::beginDisabled(); }
-            ImGui::LeftLabel("Stream");
+            ImGui::LeftLabel("输入流");
             ImGui::FillWidth();
             if (ImGui::Combo(CONCAT("##_recorder_stream_", _this->name), &_this->streamId, _this->audioStreams.txt)) {
                 _this->selectStream(_this->audioStreams.value(_this->streamId));
@@ -319,7 +319,7 @@ private:
             }
             if (_this->recording) { style::endDisabled(); }
 
-            if (ImGui::Checkbox(CONCAT("Ignore silence##_recorder_ignore_silence_", _this->name), &_this->ignoreSilence)) {
+            if (ImGui::Checkbox(CONCAT("忽略静默##_recorder_ignore_silence_", _this->name), &_this->ignoreSilence)) {
                 config.acquire();
                 config.conf[_this->name]["ignoreSilence"] = _this->ignoreSilence;
                 config.release(true);
