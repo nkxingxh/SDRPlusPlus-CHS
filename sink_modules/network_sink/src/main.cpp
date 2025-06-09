@@ -162,7 +162,7 @@ public:
             config.release(true);
         }
 
-        if (ImGui::Checkbox(CONCAT("Stereo##_network_sink_stereo_", _streamName), &stereo)) {
+        if (ImGui::Checkbox(CONCAT("立体声##_network_sink_stereo_", _streamName), &stereo)) {
             stop();
             start();
             config.acquire();

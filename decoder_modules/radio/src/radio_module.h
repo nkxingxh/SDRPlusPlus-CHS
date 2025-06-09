@@ -205,7 +205,7 @@ private:
         ImGui::EndGroup();
 
         if (!_this->bandwidthLocked) {
-            ImGui::LeftLabel("Bandwidth");
+            ImGui::LeftLabel("带宽");
             ImGui::SetNextItemWidth(menuWidth - ImGui::GetCursorPosX());
             if (ImGui::InputFloat(("##_radio_bw_" + _this->name).c_str(), &_this->bandwidth, 1, 100, "%.0f")) {
                 _this->bandwidth = std::clamp<float>(_this->bandwidth, _this->minBandwidth, _this->maxBandwidth);
@@ -214,7 +214,7 @@ private:
         }
 
         // VFO snap interval
-        ImGui::LeftLabel("Snap Interval");
+        ImGui::LeftLabel("步进间隔");
         ImGui::SetNextItemWidth(menuWidth - ImGui::GetCursorPosX());
         if (ImGui::InputInt(("##_radio_snap_" + _this->name).c_str(), &_this->snapInterval, 1, 100)) {
             if (_this->snapInterval < 1) { _this->snapInterval = 1; }
@@ -249,7 +249,7 @@ private:
         
 
         // Squelch
-        if (ImGui::Checkbox(("Squelch##_radio_sqelch_ena_" + _this->name).c_str(), &_this->squelchEnabled)) {
+        if (ImGui::Checkbox(("静噪门限##_radio_sqelch_ena_" + _this->name).c_str(), &_this->squelchEnabled)) {
             _this->setSquelchEnabled(_this->squelchEnabled);
         }
         if (!_this->squelchEnabled && _this->enabled) { style::beginDisabled(); }

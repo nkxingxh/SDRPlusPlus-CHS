@@ -378,7 +378,7 @@ private:
         SmGui::SameLine();
         SmGui::FillWidth();
         SmGui::ForceSync();
-        if (SmGui::Button(CONCAT("Refresh##_rtlsdr_refr_", _this->name)/*, ImVec2(refreshBtnWdith, 0)*/)) {
+        if (SmGui::Button(CONCAT("刷新##_rtlsdr_refr_", _this->name)/*, ImVec2(refreshBtnWdith, 0)*/)) {
             _this->refresh();
             _this->selectByName(_this->selectedDevName);
             core::setInputSampleRate(_this->sampleRate);
@@ -387,7 +387,7 @@ private:
         if (_this->running) { SmGui::EndDisabled(); }
 
         // Rest of rtlsdr config here
-        SmGui::LeftLabel("Direct Sampling");
+        SmGui::LeftLabel("直接采样");
         SmGui::FillWidth();
         if (SmGui::Combo(CONCAT("##_rtlsdr_ds_", _this->name), &_this->directSamplingMode, directSamplingModesTxt)) {
             if (_this->running) {
@@ -412,7 +412,7 @@ private:
             }
         }
 
-        SmGui::LeftLabel("PPM Correction");
+        SmGui::LeftLabel("频率误差校正");
         SmGui::FillWidth();
         if (SmGui::InputInt(CONCAT("##_rtlsdr_ppm_", _this->name), &_this->ppm, 1, 10)) {
             _this->ppm = std::clamp<int>(_this->ppm, -1000000, 1000000);
@@ -428,7 +428,7 @@ private:
 
         if (_this->tunerAgc || _this->gainList.size() == 0) { SmGui::BeginDisabled(); }
 
-        SmGui::LeftLabel("Gain");
+        SmGui::LeftLabel("增益");
         SmGui::FillWidth();
         SmGui::ForceSync();
         // TODO: FIND ANOTHER WAY

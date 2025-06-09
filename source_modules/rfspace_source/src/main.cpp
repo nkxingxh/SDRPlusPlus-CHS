@@ -193,7 +193,7 @@ private:
                 }
             }
 
-            SmGui::LeftLabel("Gain");
+            SmGui::LeftLabel("增益");
             SmGui::FillWidth();
             if (SmGui::SliderFloatWithSteps("##rfspace_source_gain", &_this->gain, -30, 0, 10, SmGui::FMT_STR_FLOAT_DB_NO_DECIMAL)) {
                 _this->client->setGain(_this->gain);

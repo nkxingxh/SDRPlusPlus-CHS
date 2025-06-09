@@ -70,7 +70,7 @@ void MainWindow::init() {
         gui::menu.order.push_back(opt);
     }
 
-    gui::menu.registerEntry("Source", sourcemenu::draw, NULL);
+    gui::menu.registerEntry("信号源", sourcemenu::draw, NULL);
     gui::menu.registerEntry("Sinks", sinkmenu::draw, NULL);
     gui::menu.registerEntry("Band Plan", bandplanmenu::draw, NULL);
     gui::menu.registerEntry("Display", displaymenu::draw, NULL);

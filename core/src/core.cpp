@@ -59,7 +59,7 @@ namespace core {
 
 // main
 int sdrpp_main(int argc, char* argv[]) {
-    flog::info("SDR++ v" VERSION_STR);
+    flog::info("SDR++ 简体中文 v" VERSION_STR);
 
 #ifdef IS_MACOS_BUNDLE
     // If this is a MacOS .app, CD to the correct directory
@@ -135,13 +135,13 @@ int sdrpp_main(int argc, char* argv[]) {
     // Menu
     defConfig["menuElements"] = json::array();
 
-    defConfig["menuElements"][0]["name"] = "Source";
+    defConfig["menuElements"][0]["name"] = "信号源";
     defConfig["menuElements"][0]["open"] = true;
 
-    defConfig["menuElements"][1]["name"] = "Radio";
+    defConfig["menuElements"][1]["name"] = "电台";
     defConfig["menuElements"][1]["open"] = true;
 
-    defConfig["menuElements"][2]["name"] = "Recorder";
+    defConfig["menuElements"][2]["name"] = "录制";
     defConfig["menuElements"][2]["open"] = true;
 
     defConfig["menuElements"][3]["name"] = "Sinks";
@@ -211,10 +211,10 @@ int sdrpp_main(int argc, char* argv[]) {
     defConfig["moduleInstances"]["Audio Sink"] = "audio_sink";
     defConfig["moduleInstances"]["Network Sink"] = "network_sink";
 
-    defConfig["moduleInstances"]["Radio"] = "radio";
+    defConfig["moduleInstances"]["电台"] = "radio";
 
     defConfig["moduleInstances"]["Frequency Manager"] = "frequency_manager";
-    defConfig["moduleInstances"]["Recorder"] = "recorder";
+    defConfig["moduleInstances"]["录制"] = "recorder";
     defConfig["moduleInstances"]["Rigctl Server"] = "rigctl_server";
     // defConfig["moduleInstances"]["Rigctl Client"] = "rigctl_client";
     // TODO: Enable rigctl_client when ready
@@ -248,16 +248,16 @@ int sdrpp_main(int argc, char* argv[]) {
     defConfig["iqCorrection"] = false;
     defConfig["invertIQ"] = false;
 
-    defConfig["streams"]["Radio"]["muted"] = false;
-    defConfig["streams"]["Radio"]["sink"] = "Audio";
-    defConfig["streams"]["Radio"]["volume"] = 1.0f;
+    defConfig["streams"]["电台"]["muted"] = false;
+    defConfig["streams"]["电台"]["sink"] = "Audio";
+    defConfig["streams"]["电台"]["volume"] = 1.0f;
 
     defConfig["windowSize"]["h"] = 720;
     defConfig["windowSize"]["w"] = 1280;
 
     defConfig["vfoOffsets"] = json::object();
 
-    defConfig["vfoColors"]["Radio"] = "#FFFFFF";
+    defConfig["vfoColors"]["电台"] = "#FFFFFF";
 
 #ifdef __ANDROID__
     defConfig["lockMenuOrder"] = true;

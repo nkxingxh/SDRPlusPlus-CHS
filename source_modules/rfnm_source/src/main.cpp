@@ -354,7 +354,7 @@ private:
         SmGui::SameLine();
         SmGui::FillWidth();
         SmGui::ForceSync();
-        if (SmGui::Button(CONCAT("Refresh##_rfnm_refr_", _this->name))) {
+        if (SmGui::Button(CONCAT("刷新##_rfnm_refr_", _this->name))) {
             _this->refresh();
             _this->select(_this->selectedSerial);
             core::setInputSampleRate(_this->sampleRate);
@@ -396,7 +396,7 @@ private:
 
         if (_this->running) { SmGui::EndDisabled(); }
 
-        SmGui::LeftLabel("Bandwidth");
+        SmGui::LeftLabel("带宽");
         SmGui::FillWidth();
         if (SmGui::Combo(CONCAT("##_rfnm_bw_sel_", _this->name), &_this->bwId, _this->bandwidths.txt)) {
             if (_this->running) {
@@ -405,7 +405,7 @@ private:
             // TODO: Save
         }
 
-        SmGui::LeftLabel("Gain");
+        SmGui::LeftLabel("增益");
         SmGui::FillWidth();
         if (SmGui::SliderInt(CONCAT("##_rfnm_gain_", _this->name), &_this->gain, _this->gainMin, _this->gainMax)) {
             if (_this->running) {

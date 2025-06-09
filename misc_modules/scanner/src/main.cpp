@@ -271,7 +271,7 @@ private:
     bool enabled = true;
     
     bool running = false;
-    //std::string selectedVFO = "Radio";
+    //std::string selectedVFO = "电台";
     double startFreq = 88000000.0;
     double stopFreq = 108000000.0;
     double interval = 100000.0;

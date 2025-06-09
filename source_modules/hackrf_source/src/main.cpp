@@ -321,7 +321,7 @@ private:
         SmGui::SameLine();
         SmGui::FillWidth();
         SmGui::ForceSync();
-        if (SmGui::Button(CONCAT("Refresh##_hackrf_refr_", _this->name))) {
+        if (SmGui::Button(CONCAT("刷新##_hackrf_refr_", _this->name))) {
             _this->refresh();
             _this->selectBySerial(_this->selectedSerial);
             core::setInputSampleRate(_this->sampleRate);
@@ -329,7 +329,7 @@ private:
 
         if (_this->running) { SmGui::EndDisabled(); }
 
-        SmGui::LeftLabel("Bandwidth");
+        SmGui::LeftLabel("带宽");
         SmGui::FillWidth();
         if (SmGui::Combo(CONCAT("##_hackrf_bw_sel_", _this->name), &_this->bwId, bandwidthsTxt)) {
             if (_this->running) {

@@ -61,7 +61,7 @@ namespace demod {
             }
             ImGui::LeftLabel("Tone Frequency");
             ImGui::FillWidth();
-            if (ImGui::InputInt(("Stereo##_radio_cw_tone_" + name).c_str(), &tone, 10, 100)) {
+            if (ImGui::InputInt(("立体声##_radio_cw_tone_" + name).c_str(), &tone, 10, 100)) {
                 tone = std::clamp<int>(tone, 250, 1250);
                 demod.setTone(tone);
                 _config->acquire();

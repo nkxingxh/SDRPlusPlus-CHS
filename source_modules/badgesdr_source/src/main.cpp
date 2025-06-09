@@ -177,7 +177,7 @@ private:
 
         SmGui::FillWidth();
         SmGui::ForceSync();
-        if (SmGui::Button(CONCAT("Refresh##_badgesdr_refr_", _this->name))) {
+        if (SmGui::Button(CONCAT("刷新##_badgesdr_refr_", _this->name))) {
             _this->refresh();
             _this->select(_this->selectedSerial);
             core::setInputSampleRate(_this->sampleRate);

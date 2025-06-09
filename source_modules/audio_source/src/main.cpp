@@ -253,7 +253,7 @@ private:
         SmGui::SameLine();
         SmGui::FillWidth();
         SmGui::ForceSync();
-        if (SmGui::Button(CONCAT("Refresh##_audio_refr_", _this->name))) {
+        if (SmGui::Button(CONCAT("刷新##_audio_refr_", _this->name))) {
             _this->refresh();
             _this->select(_this->selectedDevice);
             core::setInputSampleRate(_this->sampleRate);

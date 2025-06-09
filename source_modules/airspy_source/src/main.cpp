@@ -365,7 +365,7 @@ private:
         SmGui::SameLine();
         SmGui::FillWidth();
         SmGui::ForceSync();
-        if (SmGui::Button(CONCAT("Refresh##_airspy_refr_", _this->name))) {
+        if (SmGui::Button(CONCAT("刷新##_airspy_refr_", _this->name))) {
             _this->refresh();
             config.acquire();
             std::string devSerial = config.conf["device"];
@@ -440,7 +440,7 @@ private:
         // Gain menus
 
         if (_this->gainMode == 0) {
-            SmGui::LeftLabel("Gain");
+            SmGui::LeftLabel("增益");
             SmGui::FillWidth();
             if (SmGui::SliderInt(CONCAT("##_airspy_sens_gain_", _this->name), &_this->sensitiveGain, 0, 21)) {
                 if (_this->running) {
@@ -454,7 +454,7 @@ private:
             }
         }
         else if (_this->gainMode == 1) {
-            SmGui::LeftLabel("Gain");
+            SmGui::LeftLabel("增益");
             SmGui::FillWidth();
             if (SmGui::SliderInt(CONCAT("##_airspy_lin_gain_", _this->name), &_this->linearGain, 0, 21)) {
                 if (_this->running) {

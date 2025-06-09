@@ -389,7 +389,7 @@ private:
         if (_this->devId < 0) {
             SmGui::FillWidth();
             SmGui::ForceSync();
-            if (SmGui::Button(CONCAT("Refresh##_dev_select_", _this->name))) {
+            if (SmGui::Button(CONCAT("刷新##_dev_select_", _this->name))) {
                 _this->refresh();
                 _this->selectDevice(config.conf["device"]);
             }
@@ -416,7 +416,7 @@ private:
 
         SmGui::SameLine();
         SmGui::FillWidth();
-        if (SmGui::Button(CONCAT("Refresh##_dev_select_", _this->name))) {
+        if (SmGui::Button(CONCAT("刷新##_dev_select_", _this->name))) {
             _this->refresh();
             _this->selectDevice(config.conf["device"]);
         }
@@ -483,7 +483,7 @@ private:
             i++;
         }
         if (_this->bandwidthList.size() > 2) {
-            SmGui::LeftLabel("Bandwidth");
+            SmGui::LeftLabel("带宽");
             SmGui::FillWidth();
             if (SmGui::Combo(CONCAT("##_bw_select_", _this->name), &_this->uiBandwidthId, _this->txtBwList.c_str())) {
                 if (_this->running) {

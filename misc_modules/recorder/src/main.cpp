@@ -29,7 +29,7 @@
 
 SDRPP_MOD_INFO{
     /* Name:            */ "recorder",
-    /* Description:     */ "Recorder module for SDR++",
+    /* Description:     */ "录制 module for SDR++",
     /* Author:          */ "Ryzerth",
     /* Version:         */ 0, 3, 0,
     /* Max instances    */ -1
@@ -312,7 +312,7 @@ private:
             }
 
             if (_this->recording) { style::beginDisabled(); }
-            if (ImGui::Checkbox(CONCAT("Stereo##_recorder_stereo_", _this->name), &_this->stereo)) {
+            if (ImGui::Checkbox(CONCAT("立体声##_recorder_stereo_", _this->name), &_this->stereo)) {
                 config.acquire();
                 config.conf[_this->name]["stereo"] = _this->stereo;
                 config.release(true);

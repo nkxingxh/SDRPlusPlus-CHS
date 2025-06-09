@@ -365,7 +365,7 @@ namespace sourcemenu {
         }
 
         if (running) { style::beginDisabled(); }
-        ImGui::LeftLabel("Decimation");
+        ImGui::LeftLabel("抽取");
         ImGui::FillWidth();
         if (ImGui::Combo("##source_decim", &decimId, decimations.txt)) {
             sigpath::iqFrontEnd.setDecimation(decimations.value(decimId));

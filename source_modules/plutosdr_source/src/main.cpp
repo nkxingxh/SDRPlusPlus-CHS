@@ -384,14 +384,14 @@ private:
         SmGui::SameLine();
         SmGui::FillWidth();
         SmGui::ForceSync();
-        if (SmGui::Button(CONCAT("Refresh##_pluto_refr_", _this->name))) {
+        if (SmGui::Button(CONCAT("刷新##_pluto_refr_", _this->name))) {
             _this->refresh();
             _this->select(_this->devDesc);
             core::setInputSampleRate(_this->samplerate);
         }
         if (_this->running) { SmGui::EndDisabled(); }
 
-        SmGui::LeftLabel("Bandwidth");
+        SmGui::LeftLabel("带宽");
         SmGui::FillWidth();
         if (SmGui::Combo(CONCAT("##_pluto_bw_", _this->name), &_this->bwId, _this->bandwidths.txt)) {
             _this->bandwidth = _this->bandwidths.value(_this->bwId);
@@ -419,7 +419,7 @@ private:
             }
         }
 
-        SmGui::LeftLabel("Gain");
+        SmGui::LeftLabel("增益");
         if (_this->gmId) { SmGui::BeginDisabled(); }
         SmGui::FillWidth();
         if (SmGui::SliderFloatWithSteps(CONCAT("##_pluto_gain__", _this->name), &_this->gain, -1.0f, 73.0f, 1.0f, SmGui::FMT_STR_FLOAT_DB_NO_DECIMAL)) {

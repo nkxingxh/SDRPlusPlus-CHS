@@ -670,13 +670,13 @@ private:
             SmGui::SameLine();
             SmGui::FillWidth();
             SmGui::ForceSync();
-            if (SmGui::Button(CONCAT("Refresh##sdrplay_refresh", _this->name))) {
+            if (SmGui::Button(CONCAT("刷新##sdrplay_refresh", _this->name))) {
                 _this->refresh();
                 _this->selectByName(_this->selectedName);
                 core::setInputSampleRate(_this->sampleRate);
             }
 
-            SmGui::LeftLabel("Bandwidth");
+            SmGui::LeftLabel("带宽");
             SmGui::FillWidth();
             if (SmGui::Combo(CONCAT("##sdrplay_bw", _this->name), &_this->bandwidthId, _this->bandwidths.txt)) {
                 _this->bandwidth = (_this->bandwidthId == 8) ? preferedBandwidth[_this->srId] : _this->bandwidths[_this->bandwidthId];
@@ -692,7 +692,7 @@ private:
         else {
             SmGui::FillWidth();
             SmGui::ForceSync();
-            if (SmGui::Button(CONCAT("Refresh##sdrplay_refresh", _this->name))) {
+            if (SmGui::Button(CONCAT("刷新##sdrplay_refresh", _this->name))) {
                 _this->refresh();
                 _this->selectByName(_this->selectedName);
             }

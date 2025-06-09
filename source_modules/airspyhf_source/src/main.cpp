@@ -319,7 +319,7 @@ private:
         SmGui::SameLine();
         SmGui::FillWidth();
         SmGui::ForceSync();
-        if (SmGui::Button(CONCAT("Refresh##_airspyhf_refr_", _this->name))) {
+        if (SmGui::Button(CONCAT("刷新##_airspyhf_refr_", _this->name))) {
             _this->refresh();
             config.acquire();
             std::string devSerial = config.conf["device"];

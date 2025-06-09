@@ -154,7 +154,7 @@ private:
 
             ImGui::TableNextRow();
             ImGui::TableSetColumnIndex(0);
-            ImGui::LeftLabel("Bandwidth");
+            ImGui::LeftLabel("带宽");
             ImGui::TableSetColumnIndex(1);
             ImGui::SetNextItemWidth(200);
             ImGui::InputDouble(("##freq_manager_edit_bw" + name).c_str(), &editedBookmark.bandwidth);

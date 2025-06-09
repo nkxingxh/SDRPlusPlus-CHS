@@ -348,7 +348,7 @@ private:
         SmGui::SameLine();
         SmGui::FillWidth();
         SmGui::ForceSync();
-        if (SmGui::Button(CONCAT("Refresh##_spectran_refr_", _this->name))) {
+        if (SmGui::Button(CONCAT("刷新##_spectran_refr_", _this->name))) {
             _this->refresh();
             _this->selectSerial(_this->selectedSerial);
             core::setInputSampleRate(_this->samplerate.effective);

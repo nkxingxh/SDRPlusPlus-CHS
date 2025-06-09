@@ -210,7 +210,7 @@ private:
         SmGui::SameLine();
         SmGui::FillWidth();
         SmGui::ForceSync();
-        if (SmGui::Button(CONCAT("Refresh##_kcsdr_refr_", _this->name))) {
+        if (SmGui::Button(CONCAT("刷新##_kcsdr_refr_", _this->name))) {
             _this->refresh();
             _this->select(_this->selectedSerial);
             core::setInputSampleRate(_this->sampleRate);
@@ -236,7 +236,7 @@ private:
             // TODO: Save
         }
 
-        SmGui::LeftLabel("Gain");
+        SmGui::LeftLabel("增益");
         SmGui::FillWidth();
         if (SmGui::SliderInt(CONCAT("##_kcsdr_gain_", _this->name), &_this->gain, 0, 31)) {
             if (_this->running) {

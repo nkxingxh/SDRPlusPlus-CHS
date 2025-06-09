@@ -468,7 +468,7 @@ private:
         SmGui::SameLine();
         SmGui::FillWidth();
         SmGui::ForceSync();
-        if (SmGui::Button(CONCAT("Refresh##_balderf_refr_", _this->name))) {
+        if (SmGui::Button(CONCAT("刷新##_balderf_refr_", _this->name))) {
             _this->refresh();
             _this->selectBySerial(_this->selectedSerial, false);
             core::setInputSampleRate(_this->sampleRate);
@@ -488,7 +488,7 @@ private:
 
         if (_this->running) { SmGui::EndDisabled(); }
 
-        SmGui::LeftLabel("Bandwidth");
+        SmGui::LeftLabel("带宽");
         SmGui::FillWidth();
         if (SmGui::Combo(CONCAT("##_balderf_bw_sel_", _this->name), &_this->bwId, _this->bandwidthsTxt.c_str())) {
             if (_this->running) {
@@ -536,7 +536,7 @@ private:
         if (_this->selectedSerial != "") {
             if (_this->gainModes[_this->gainMode].mode != BLADERF_GAIN_MANUAL) { SmGui::BeginDisabled(); }
         }
-        SmGui::LeftLabel("Gain");
+        SmGui::LeftLabel("增益");
         SmGui::FillWidth();
         if (SmGui::SliderInt("##_balderf_oag_sel_", &_this->overallGain, (_this->gainRange != NULL) ? _this->gainRange->min : 0, (_this->gainRange != NULL) ? _this->gainRange->max : 60)) {
             if (_this->running) {

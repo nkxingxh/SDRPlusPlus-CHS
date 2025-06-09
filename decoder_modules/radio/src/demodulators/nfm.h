@@ -37,7 +37,7 @@ namespace demod {
         void stop() { demod.stop(); }
 
         void showMenu() {
-            if (ImGui::Checkbox(("Low Pass##_radio_wfm_lowpass_" + name).c_str(), &_lowPass)) {
+            if (ImGui::Checkbox(("低通##_radio_wfm_lowpass_" + name).c_str(), &_lowPass)) {
                 demod.setLowPass(_lowPass);
                 _config->acquire();
                 _config->conf[name][getName()]["lowPass"] = _lowPass;

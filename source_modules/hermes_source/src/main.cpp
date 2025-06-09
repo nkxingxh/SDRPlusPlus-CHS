@@ -219,7 +219,7 @@ private:
         SmGui::SameLine();
         SmGui::FillWidth();
         SmGui::ForceSync();
-        if (SmGui::Button(CONCAT("Refresh##_hermes_refr_", _this->name))) {
+        if (SmGui::Button(CONCAT("刷新##_hermes_refr_", _this->name))) {
             _this->refresh();
             config.acquire();
             std::string mac = config.conf["device"];

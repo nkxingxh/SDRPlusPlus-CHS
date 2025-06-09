@@ -22,10 +22,10 @@ public:
         t.selected = false;
 
         json recStartConfig;
-        recStartConfig["recorder"] = "Recorder";
+        recStartConfig["recorder"] = "录制";
 
         json tuneVFOConfig;
-        tuneVFOConfig["vfo"] = "Radio";
+        tuneVFOConfig["vfo"] = "电台";
         tuneVFOConfig["frequency"] = 103500000.0;
 
         auto recStart = sched_action::StartRecorder();

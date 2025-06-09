@@ -342,7 +342,7 @@ private:
         SmGui::SameLine();
         SmGui::FillWidth();
         SmGui::ForceSync();
-        if (SmGui::Button(CONCAT("Refresh##_usrp_refr_", _this->name))) {
+        if (SmGui::Button(CONCAT("刷新##_usrp_refr_", _this->name))) {
             _this->refresh();
             _this->select(_this->selectedSer);
             core::setInputSampleRate(_this->sampleRate);
@@ -380,7 +380,7 @@ private:
         }
 
         if (_this->bandwidths.size() > 2) {
-            SmGui::LeftLabel("Bandwidth");
+            SmGui::LeftLabel("带宽");
             SmGui::FillWidth();
             if (SmGui::Combo(CONCAT("##_usrp_bw_sel_", _this->name), &_this->bwId, _this->bandwidths.txt)) {
                 if (_this->running) {
@@ -409,7 +409,7 @@ private:
             }
         }
 
-        SmGui::LeftLabel("Gain");
+        SmGui::LeftLabel("增益");
         SmGui::FillWidth();
         if (SmGui::SliderFloatWithSteps(CONCAT("##_usrp_gain_", _this->name), &_this->gain, _this->gainRange.start(), _this->gainRange.stop(), _this->gainRange.step(), SmGui::FMT_STR_FLOAT_DB_ONE_DECIMAL)) {
             if (_this->running) {
