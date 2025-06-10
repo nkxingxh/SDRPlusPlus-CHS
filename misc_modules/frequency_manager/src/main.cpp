@@ -399,7 +399,7 @@ private:
 
         // List delete confirmation
         if (ImGui::GenericDialog(("freq_manager_del_list_confirm" + _this->name).c_str(), _this->deleteListOpen, GENERIC_DIALOG_BUTTONS_YES_NO, [_this]() {
-                ImGui::Text("Deleting list named \"%s\". Are you sure?", _this->selectedListName.c_str());
+                ImGui::Text("确定要删除列表 \"%s\" 吗?", _this->selectedListName.c_str());
             }) == GENERIC_DIALOG_BUTTON_YES) {
             config.acquire();
             config.conf["lists"].erase(_this->selectedListName);
@@ -478,7 +478,7 @@ private:
         // Bookmark delete confirm dialog
         // List delete confirmation
         if (ImGui::GenericDialog(("freq_manager_del_list_confirm" + _this->name).c_str(), _this->deleteBookmarksOpen, GENERIC_DIALOG_BUTTONS_YES_NO, [_this]() {
-                ImGui::TextUnformatted("Deleting selected bookmaks. Are you sure?");
+                ImGui::TextUnformatted("确定要删除选中的书签吗?");
             }) == GENERIC_DIALOG_BUTTON_YES) {
             for (auto& _name : selectedNames) { _this->bookmarks.erase(_name); }
             _this->saveByName(_this->selectedListName);
