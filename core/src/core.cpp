@@ -147,16 +147,16 @@ int sdrpp_main(int argc, char* argv[]) {
     defConfig["menuElements"][3]["name"] = "输出";
     defConfig["menuElements"][3]["open"] = true;
 
-    defConfig["menuElements"][4]["name"] = "Frequency Manager";
+    defConfig["menuElements"][4]["name"] = "频率管理器";
     defConfig["menuElements"][4]["open"] = true;
 
-    defConfig["menuElements"][5]["name"] = "VFO Color";
+    defConfig["menuElements"][5]["name"] = "VFO 颜色";
     defConfig["menuElements"][5]["open"] = true;
 
     defConfig["menuElements"][6]["name"] = "频段划分";
     defConfig["menuElements"][6]["open"] = true;
 
-    defConfig["menuElements"][7]["name"] = "Display";
+    defConfig["menuElements"][7]["name"] = "显示";
     defConfig["menuElements"][7]["open"] = true;
 
     defConfig["menuWidth"] = 300;
@@ -213,9 +213,9 @@ int sdrpp_main(int argc, char* argv[]) {
 
     defConfig["moduleInstances"]["电台"] = "radio";
 
-    defConfig["moduleInstances"]["Frequency Manager"] = "frequency_manager";
+    defConfig["moduleInstances"]["频率管理器"] = "frequency_manager";
     defConfig["moduleInstances"]["录制"] = "recorder";
-    defConfig["moduleInstances"]["Rigctl Server"] = "rigctl_server";
+    defConfig["moduleInstances"]["Rigctl 服务器"] = "rigctl_server";
     // defConfig["moduleInstances"]["Rigctl Client"] = "rigctl_client";
     // TODO: Enable rigctl_client when ready
     // defConfig["moduleInstances"]["Scanner"] = "scanner";
@@ -223,7 +223,7 @@ int sdrpp_main(int argc, char* argv[]) {
 
 
     // Themes
-    defConfig["theme"] = "Dark";
+    defConfig["theme"] = "深色";
 #ifdef __ANDROID__
     defConfig["uiScale"] = 3.0f;
 #else

@@ -19,8 +19,8 @@ namespace thememenu {
         themeNames = gui::themeManager.getThemeNames();
         auto it = std::find(themeNames.begin(), themeNames.end(), selectedThemeName);
         if (it == themeNames.end()) {
-            it = std::find(themeNames.begin(), themeNames.end(), "Dark");
-            selectedThemeName = "Dark";
+            it = std::find(themeNames.begin(), themeNames.end(), "深色");
+            selectedThemeName = "深色";
         }
         themeId = std::distance(themeNames.begin(), it);
         applyTheme();
@@ -41,7 +41,7 @@ namespace thememenu {
 
     void draw(void* ctx) {
         float menuWidth = ImGui::GetContentRegionAvail().x;
-        ImGui::LeftLabel("Theme");
+        ImGui::LeftLabel("主题");
         ImGui::SetNextItemWidth(menuWidth - ImGui::GetCursorPosX());
         if (ImGui::Combo("##theme_select_combo", &themeId, themeNamesTxt.c_str())) {
             applyTheme();

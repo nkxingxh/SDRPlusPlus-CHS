@@ -128,24 +128,24 @@ namespace displaymenu {
 
     void draw(void* ctx) {
         float menuWidth = ImGui::GetContentRegionAvail().x;
-        if (ImGui::Checkbox("Show Waterfall##_sdrpp", &showWaterfall)) {
+        if (ImGui::Checkbox("显示瀑布图##_sdrpp", &showWaterfall)) {
             setWaterfallShown(showWaterfall);
         }
 
-        if (ImGui::Checkbox("Full Waterfall Update##_sdrpp", &fullWaterfallUpdate)) {
+        if (ImGui::Checkbox("瀑布图全幅刷新##_sdrpp", &fullWaterfallUpdate)) {
             gui::waterfall.setFullWaterfallUpdate(fullWaterfallUpdate);
             core::configManager.acquire();
             core::configManager.conf["fullWaterfallUpdate"] = fullWaterfallUpdate;
             core::configManager.release(true);
         }
 
-        if (ImGui::Checkbox("Lock Menu Order##_sdrpp", &gui::menu.locked)) {
+        if (ImGui::Checkbox("锁定菜单顺序##_sdrpp", &gui::menu.locked)) {
             core::configManager.acquire();
             core::configManager.conf["lockMenuOrder"] = gui::menu.locked;
             core::configManager.release(true);
         }
 
-        if (ImGui::Checkbox("FFT Hold##_sdrpp", &fftHold)) {
+        if (ImGui::Checkbox("FFT 保持##_sdrpp", &fftHold)) {
             gui::waterfall.setFFTHold(fftHold);
             core::configManager.acquire();
             core::configManager.conf["fftHold"] = fftHold;
@@ -160,7 +160,7 @@ namespace displaymenu {
             core::configManager.release(true);
         }
 
-        if (ImGui::Checkbox("FFT Smoothing##_sdrpp", &fftSmoothing)) {
+        if (ImGui::Checkbox("FFT 平滑##_sdrpp", &fftSmoothing)) {
             gui::waterfall.setFFTSmoothing(fftSmoothing);
             core::configManager.acquire();
             core::configManager.conf["fftSmoothing"] = fftSmoothing;
@@ -176,7 +176,7 @@ namespace displaymenu {
             core::configManager.release(true);
         }
 
-        if (ImGui::Checkbox("SNR Smoothing##_sdrpp", &snrSmoothing)) {
+        if (ImGui::Checkbox("SNR 平滑##_sdrpp", &snrSmoothing)) {
             gui::waterfall.setSNRSmoothing(snrSmoothing);
             core::configManager.acquire();
             core::configManager.conf["snrSmoothing"] = snrSmoothing;
@@ -192,7 +192,7 @@ namespace displaymenu {
             core::configManager.release(true);
         }
 
-        ImGui::LeftLabel("High-DPI Scaling");
+        ImGui::LeftLabel("高 DPI 缩放");
         ImGui::FillWidth();
         if (ImGui::Combo("##sdrpp_ui_scale", &uiScaleId, uiScales.txt)) {
             core::configManager.acquire();
@@ -201,7 +201,7 @@ namespace displaymenu {
             restartRequired = true;
         }
 
-        ImGui::LeftLabel("FFT Framerate");
+        ImGui::LeftLabel("FFT 帧率");
         ImGui::SetNextItemWidth(menuWidth - ImGui::GetCursorPosX());
         if (ImGui::InputInt("##sdrpp_fft_rate", &fftRate, 1, 10)) {
             fftRate = std::max<int>(1, fftRate);
@@ -212,7 +212,7 @@ namespace displaymenu {
             core::configManager.release(true);
         }
 
-        ImGui::LeftLabel("FFT Size");
+        ImGui::LeftLabel("FFT 尺寸");
         ImGui::SetNextItemWidth(menuWidth - ImGui::GetCursorPosX());
         if (ImGui::Combo("##sdrpp_fft_size", &fftSizeId, fftSizes.txt)) {
             sigpath::iqFrontEnd.setFFTSize(fftSizes.value(fftSizeId));
@@ -221,9 +221,9 @@ namespace displaymenu {
             core::configManager.release(true);
         }
 
-        ImGui::LeftLabel("FFT Window");
+        ImGui::LeftLabel("FFT 窗口");
         ImGui::SetNextItemWidth(menuWidth - ImGui::GetCursorPosX());
-        if (ImGui::Combo("##sdrpp_fft_window", &selectedWindow, "Rectangular\0Blackman\0Nuttall\0")) {
+        if (ImGui::Combo("##sdrpp_fft_window", &selectedWindow, "Rectangular (矩形窗)\0Blackman (布莱克曼窗)\0Nuttall (纳特窗)\0")) {
             sigpath::iqFrontEnd.setFFTWindow(fftWindowList[selectedWindow]);
             core::configManager.acquire();
             core::configManager.conf["fftWindow"] = selectedWindow;
@@ -231,7 +231,7 @@ namespace displaymenu {
         }
 
         if (colorMapNames.size() > 0) {
-            ImGui::LeftLabel("Color Map");
+            ImGui::LeftLabel("颜色映射");
             ImGui::SetNextItemWidth(menuWidth - ImGui::GetCursorPosX());
             if (ImGui::Combo("##_sdrpp_color_map_sel", &colorMapId, colorMapNamesTxt.c_str())) {
                 colormaps::Map map = colormaps::maps[colorMapNames[colorMapId]];
@@ -241,11 +241,11 @@ namespace displaymenu {
                 core::configManager.release(true);
                 colorMapAuthor = map.author;
             }
-            ImGui::Text("Color map Author: %s", colorMapAuthor.c_str());
+            ImGui::Text("颜色映射作者: %s", colorMapAuthor.c_str());
         }
 
         if (restartRequired) {
-            ImGui::TextColored(ImVec4(1.0f, 1.0f, 0.0f, 1.0f), "Restart required.");
+            ImGui::TextColored(ImVec4(1.0f, 1.0f, 0.0f, 1.0f), "需要重启。");
         }
     }
 }

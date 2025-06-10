@@ -73,10 +73,10 @@ void MainWindow::init() {
     gui::menu.registerEntry("信号源", sourcemenu::draw, NULL);
     gui::menu.registerEntry("输出", sinkmenu::draw, NULL);
     gui::menu.registerEntry("频段划分", bandplanmenu::draw, NULL);
-    gui::menu.registerEntry("Display", displaymenu::draw, NULL);
-    gui::menu.registerEntry("Theme", thememenu::draw, NULL);
-    gui::menu.registerEntry("VFO Color", vfo_color_menu::draw, NULL);
-    gui::menu.registerEntry("Module Manager", module_manager_menu::draw, NULL);
+    gui::menu.registerEntry("显示", displaymenu::draw, NULL);
+    gui::menu.registerEntry("主题", thememenu::draw, NULL);
+    gui::menu.registerEntry("VFO 颜色", vfo_color_menu::draw, NULL);
+    gui::menu.registerEntry("模块管理器", module_manager_menu::draw, NULL);
 
     gui::freqSelect.init();
 
@@ -501,13 +501,13 @@ void MainWindow::draw() {
             firstMenuRender = false;
         }
 
-        if (ImGui::CollapsingHeader("Debug")) {
-            ImGui::Text("Frame time: %.3f ms/frame", ImGui::GetIO().DeltaTime * 1000.0f);
-            ImGui::Text("Framerate: %.1f FPS", ImGui::GetIO().Framerate);
-            ImGui::Text("Center Frequency: %.0f Hz", gui::waterfall.getCenterFrequency());
-            ImGui::Text("Source name: %s", sourceName.c_str());
-            ImGui::Checkbox("Show demo window", &demoWindow);
-            ImGui::Text("ImGui version: %s", ImGui::GetVersion());
+        if (ImGui::CollapsingHeader("调试")) {
+            ImGui::Text("帧时间: %.3f ms/frame", ImGui::GetIO().DeltaTime * 1000.0f);
+            ImGui::Text("帧率: %.1f FPS", ImGui::GetIO().Framerate);
+            ImGui::Text("中心频率: %.0f Hz", gui::waterfall.getCenterFrequency());
+            ImGui::Text("源名称: %s", sourceName.c_str());
+            ImGui::Checkbox("显示示例窗口", &demoWindow);
+            ImGui::Text("ImGui 版本: %s", ImGui::GetVersion());
 
             // ImGui::Checkbox("Bypass buffering", &sigpath::iqFrontEnd.inputBuffer.bypass);
 

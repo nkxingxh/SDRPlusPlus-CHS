@@ -330,13 +330,13 @@ private:
         bool canRecord = _this->folderSelect.pathIsValid();
         if (_this->recMode == RECORDER_MODE_AUDIO) { canRecord &= !_this->selectedStreamName.empty(); }
         if (!_this->recording) {
-            if (ImGui::Button(CONCAT("Record##_recorder_rec_", _this->name), ImVec2(menuWidth, 0))) {
+            if (ImGui::Button(CONCAT("开始录制##_recorder_rec_", _this->name), ImVec2(menuWidth, 0))) {
                 _this->start();
             }
-            ImGui::TextColored(ImGui::GetStyleColorVec4(ImGuiCol_Text), "Idle --:--:--");
+            ImGui::TextColored(ImGui::GetStyleColorVec4(ImGuiCol_Text), "空闲 --:--:--");
         }
         else {
-            if (ImGui::Button(CONCAT("Stop##_recorder_rec_", _this->name), ImVec2(menuWidth, 0))) {
+            if (ImGui::Button(CONCAT("停止录制##_recorder_rec_", _this->name), ImVec2(menuWidth, 0))) {
                 _this->stop();
             }
             uint64_t seconds = _this->writer.getSamplesWritten() / _this->samplerate;
@@ -344,10 +344,10 @@ private:
             tm* dtm = gmtime(&diff);
 
             if (_this->ignoreSilence && _this->ignoringSilence) {
-                ImGui::TextColored(ImVec4(1.0f, 1.0f, 0.0f, 1.0f), "Paused %02d:%02d:%02d", dtm->tm_hour, dtm->tm_min, dtm->tm_sec);
+                ImGui::TextColored(ImVec4(1.0f, 1.0f, 0.0f, 1.0f), "已暂停 %02d:%02d:%02d", dtm->tm_hour, dtm->tm_min, dtm->tm_sec);
             }
             else {
-                ImGui::TextColored(ImVec4(1.0f, 0.0f, 0.0f, 1.0f), "Recording %02d:%02d:%02d", dtm->tm_hour, dtm->tm_min, dtm->tm_sec);
+                ImGui::TextColored(ImVec4(1.0f, 0.0f, 0.0f, 1.0f), "录制中 %02d:%02d:%02d", dtm->tm_hour, dtm->tm_min, dtm->tm_sec);
             }
         }
     }

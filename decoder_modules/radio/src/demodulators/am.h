@@ -56,7 +56,7 @@ namespace demod {
                 _config->conf[name][getName()]["agcDecay"] = agcDecay;
                 _config->release(true);
             }
-            if (ImGui::Checkbox(("Carrier AGC##_radio_am_carrier_agc_" + name).c_str(), &carrierAgc)) {
+            if (ImGui::Checkbox(("Carrier AGC (自动载波增益)##_radio_am_carrier_agc_" + name).c_str(), &carrierAgc)) {
                 demod.setAGCMode(carrierAgc ? dsp::demod::AM<dsp::stereo_t>::AGCMode::CARRIER : dsp::demod::AM<dsp::stereo_t>::AGCMode::AUDIO);
                 _config->acquire();
                 _config->conf[name][getName()]["carrierAgc"] = carrierAgc;

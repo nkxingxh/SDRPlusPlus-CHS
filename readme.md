@@ -412,7 +412,7 @@ To solve, this, simply downgrade to libusb1.3
 ## SDR++ crashes when starting a HackRF
 
 If you also have the SoapySDR module enabled, this is a bug in libhackrf. It's caused by libhackrf not checking if it's already initialized.
-The solution until a fixed libhackrf version is released is to disable the soapy_source module from SDR++. For this, go into the "Module Manager" menu and click the `-` button next to the row with "soapy_source". After that, restart SDR++.
+The solution until a fixed libhackrf version is released is to disable the soapy_source module from SDR++. For this, go into the "模块管理器" menu and click the `-` button next to the row with "soapy_source". After that, restart SDR++.
 
 ## Issue not listed here?
 
