@@ -138,7 +138,7 @@ private:
 
             ImGui::TableNextRow();
             ImGui::TableSetColumnIndex(0);
-            ImGui::LeftLabel("Name");
+            ImGui::LeftLabel("名称");
             ImGui::TableSetColumnIndex(1);
             ImGui::SetNextItemWidth(200);
             if (ImGui::InputText(("##freq_manager_edit_name" + name).c_str(), nameBuf, 1023)) {
@@ -147,7 +147,7 @@ private:
 
             ImGui::TableNextRow();
             ImGui::TableSetColumnIndex(0);
-            ImGui::LeftLabel("Frequency");
+            ImGui::LeftLabel("频率");
             ImGui::TableSetColumnIndex(1);
             ImGui::SetNextItemWidth(200);
             ImGui::InputDouble(("##freq_manager_edit_freq" + name).c_str(), &editedBookmark.frequency);
@@ -161,7 +161,7 @@ private:
 
             ImGui::TableNextRow();
             ImGui::TableSetColumnIndex(0);
-            ImGui::LeftLabel("Mode");
+            ImGui::LeftLabel("模式");
             ImGui::TableSetColumnIndex(1);
             ImGui::SetNextItemWidth(200);
 
@@ -184,7 +184,7 @@ private:
             }
             if (applyDisabled) { style::endDisabled(); }
             ImGui::SameLine();
-            if (ImGui::Button("Cancel")) {
+            if (ImGui::Button("取消")) {
                 open = false;
             }
             ImGui::EndPopup();
@@ -517,7 +517,7 @@ private:
 
 
         if (selectedNames.size() != 1 && _this->selectedListName != "") { style::beginDisabled(); }
-        if (ImGui::Button(("Apply##_freq_mgr_apply_" + _this->name).c_str(), ImVec2(menuWidth, 0))) {
+        if (ImGui::Button(("应用##_freq_mgr_apply_" + _this->name).c_str(), ImVec2(menuWidth, 0))) {
             FrequencyBookmark& bm = _this->bookmarks[selectedNames[0]];
             applyBookmark(bm, gui::waterfall.selectedVFO);
             bm.selected = false;

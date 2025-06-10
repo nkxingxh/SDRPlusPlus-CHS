@@ -64,7 +64,7 @@ namespace credits {
         ImGui::Spacing();
         ImGui::Spacing();
         ImGui::Spacing();
-        ImGui::TextUnformatted("SDR++ 简体中文 v" VERSION_STR " (Built at " __TIME__ ", " __DATE__ ")  由 NKXingXh 翻译");
+        ImGui::TextUnformatted("SDR++ 简体中文 v" VERSION_STR " (构建于 " __TIME__ ", " __DATE__ ")  由 NKXingXh 翻译");
 
         ImGui::EndPopup();
         ImGui::PopStyleColor();

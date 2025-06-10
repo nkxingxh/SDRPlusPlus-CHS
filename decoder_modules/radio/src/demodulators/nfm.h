@@ -43,7 +43,7 @@ namespace demod {
                 _config->conf[name][getName()]["lowPass"] = _lowPass;
                 _config->release(true);
             }
-            if (ImGui::Checkbox(("High Pass##_radio_wfm_highpass_" + name).c_str(), &_highPass)) {
+            if (ImGui::Checkbox(("高通##_radio_wfm_highpass_" + name).c_str(), &_highPass)) {
                 demod.setHighPass(_highPass);
                 _config->acquire();
                 _config->conf[name][getName()]["highPass"] = _highPass;
