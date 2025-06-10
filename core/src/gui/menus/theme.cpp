@@ -19,8 +19,8 @@ namespace thememenu {
         themeNames = gui::themeManager.getThemeNames();
         auto it = std::find(themeNames.begin(), themeNames.end(), selectedThemeName);
         if (it == themeNames.end()) {
-            it = std::find(themeNames.begin(), themeNames.end(), "深色");
-            selectedThemeName = "深色";
+            it = std::find(themeNames.begin(), themeNames.end(), "深色模式");
+            selectedThemeName = "深色模式";
         }
         themeId = std::distance(themeNames.begin(), it);
         applyTheme();

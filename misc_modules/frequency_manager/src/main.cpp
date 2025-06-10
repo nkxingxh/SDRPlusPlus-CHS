@@ -368,7 +368,7 @@ private:
         }
         ImGui::SameLine();
         if (_this->listNames.size() == 0) { style::beginDisabled(); }
-        if (ImGui::Button(("Rename##_freq_mgr_ren_lst_" + _this->name).c_str(), ImVec2(btnSize, 0))) {
+        if (ImGui::Button(("重命名##_freq_mgr_ren_lst_" + _this->name).c_str(), ImVec2(btnSize, 0))) {
             _this->firstEditedListName = _this->listNames[_this->selectedListId];
             _this->editedListName = _this->firstEditedListName;
             _this->renameListOpen = true;
@@ -383,7 +383,7 @@ private:
             else {
                 char buf[64];
                 for (int i = 1; i < 1000; i++) {
-                    sprintf(buf, "New List (%d)", i);
+                    sprintf(buf, "新列表 (%d)", i);
                     if (std::find(_this->listNames.begin(), _this->listNames.end(), buf) == _this->listNames.end()) { break; }
                 }
                 _this->editedListName = buf;
@@ -826,10 +826,10 @@ private:
 
 MOD_EXPORT void _INIT_() {
     json def = json({});
-    def["selectedList"] = "通用";
+    def["selectedList"] = "通用列表";
     def["bookmarkDisplayMode"] = BOOKMARK_DISP_MODE_TOP;
-    def["lists"]["通用"]["showOnWaterfall"] = true;
-    def["lists"]["通用"]["bookmarks"] = json::object();
+    def["lists"]["通用列表"]["showOnWaterfall"] = true;
+    def["lists"]["通用列表"]["bookmarks"] = json::object();
 
     config.setPath(core::args["root"].s() + "/frequency_manager_config.json");
     config.load(def);

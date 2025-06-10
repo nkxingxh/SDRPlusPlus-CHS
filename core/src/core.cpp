@@ -223,7 +223,7 @@ int sdrpp_main(int argc, char* argv[]) {
 
 
     // Themes
-    defConfig["theme"] = "深色";
+    defConfig["theme"] = "深色模式";
 #ifdef __ANDROID__
     defConfig["uiScale"] = 3.0f;
 #else
