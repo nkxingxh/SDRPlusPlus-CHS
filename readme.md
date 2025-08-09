@@ -1,7 +1,9 @@
-# SDR++, The bloat-free SDR software<br>
+# SDR++, 轻量的 SDR 软件<br>
 
 ![Screenshot](https://i.imgur.com/Ter2MQJ.png)
-SDR++ is a cross-platform and open source SDR software with the aim of being bloat free and simple to use.
+SDR++ 是一款跨平台且开源的软件定义无线电 (SDR) 软件，其设计目标是精简高效且易于使用。
+
+> 当前分支是 SDR++ 的简体中文版本。
 
 ![Build](https://github.com/AlexandreRouma/SDRPlusPlus/workflows/Build%20Binaries/badge.svg)
 
@@ -10,30 +12,32 @@ SDR++ is a cross-platform and open source SDR software with the aim of being blo
 * [Reddit](https://www.reddit.com/r/sdrpp/)
 * IRC: `#sdrpp` ([libera.chat](https://libera.chat)) __**NO LONGER ACTIVE, JOIN DISCORD INSTEAD**__
 
-## Features
+## 特性
 
-* Multi VFO
-* Wide hardware support (both through SoapySDR and dedicated modules)
-* SIMD accelerated DSP
-* Cross-platform (Windows, Linux, MacOS and BSD)
-* Full waterfall update when possible. Makes browsing signals easier and more pleasant
-* Modular design (easily write your own plugins)
+* 多频点调谐器 (Multi VFO) 
+* 广泛的硬件支持 (both through SoapySDR and dedicated modules) 
+* 支持 SIMD 加速的数字信号处理 (DSP) 
+* 跨平台支持 (Windows、Linux、MacOS 和 BSD) 
+* 在可能的情况下实现瀑布图全图更新，使信号浏览更加轻松和愉悦
+* 模块化设计 (可轻松编写自己的插件) 
 
-# Installing
+# 安装
 
-## Nightly Builds
+## 夜间构建
 
-Nightly builds contain the very latest features and bugfixes. They are usually just stable as [normal releases](https://github.com/AlexandreRouma/SDRPlusPlus/releases) but are available basically minutes to hours after a change has been pushed to the code.
+*译者注: 当前分支并没有每夜构建。*
 
-You can download them [here](https://www.sdrpp.org/nightly). It'll redirect you to the latest nightly on GitHub, scroll down to "Artifacts" and click on the version for your OS.
+夜间构建包含最新的功能和 bug 修复。它们通常与[常规发布](https://github.com/AlexandreRouma/SDRPlusPlus/releases)一样稳定，但通常在代码更改推送后几分钟到几小时内即可获取。
 
-GitHub currently requires an account for the files to be downloadable so make sure you are logged in.
+您可以从[此处](https://www.sdrpp.org/nightly)下载它们。系统会将您重定向至 GitHub 上的最新夜间构建版本，请滚动至“Artifacts”部分并点击适用于您操作系统的版本。
+
+目前 GitHub 要求用户登录才能下载文件，因此请确保您已登录。
 
 ## Windows
 
-Download the latest release from [the Releases page](https://github.com/AlexandreRouma/SDRPlusPlus/releases) and extract to the directory of your choice.
+从[发布页面](https://github.com/AlexandreRouma/SDRPlusPlus/releases)下载最新版本，并解压到您选择的目录中。
 
-To create a desktop shortcut, rightclick the exe and select `Send to -> Desktop (create shortcut)`, then, rename the shortcut on the desktop to whatever you want.
+要创建桌面快捷方式，右键点击exe文件，选择 `发送到 -> 桌面 (创建快捷方式) `，然后将桌面上的快捷方式重命名为您想要的名称。
 
 ## Linux
 
