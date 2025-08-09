@@ -32,29 +32,30 @@ namespace credits {
         ImGui::Spacing();
         ImGui::Spacing();
 
-        ImGui::TextUnformatted("This software is brought to you by Alexandre Rouma (ON5RYZ) with the help of\n\n");
+        ImGui::TextUnformatted("简体中文版本由 NKXingXh (BG5JRE) 翻译。\n");
+        ImGui::TextUnformatted("这个软件由 Alexandre Rouma (ON5RYZ) 在下列人员的帮助下为您带来\n\n");
 
         ImGui::Columns(4, "CreditColumns", true);
 
-        ImGui::TextUnformatted("Contributors");
+        ImGui::TextUnformatted("贡献者");
         for (int i = 0; i < sdrpp_credits::contributorCount; i++) {
             ImGui::BulletText("%s", sdrpp_credits::contributors[i]);
         }
 
         ImGui::NextColumn();
-        ImGui::TextUnformatted("Libraries");
+        ImGui::TextUnformatted("库");
         for (int i = 0; i < sdrpp_credits::libraryCount; i++) {
             ImGui::BulletText("%s", sdrpp_credits::libraries[i]);
         }
 
         ImGui::NextColumn();
-        ImGui::TextUnformatted("Hardware Donators");
+        ImGui::TextUnformatted("硬件捐赠");
         for (int i = 0; i < sdrpp_credits::hardwareDonatorCount; i++) {
             ImGui::BulletText("%s", sdrpp_credits::hardwareDonators[i]);
         }
 
         ImGui::NextColumn();
-        ImGui::TextUnformatted("Patrons");
+        ImGui::TextUnformatted("赞助者");
         for (int i = 0; i < sdrpp_credits::patronCount; i++) {
             ImGui::BulletText("%s", sdrpp_credits::patrons[i]);
         }
@@ -64,7 +65,7 @@ namespace credits {
         ImGui::Spacing();
         ImGui::Spacing();
         ImGui::Spacing();
-        ImGui::TextUnformatted("SDR++ 简体中文 v" VERSION_STR " (构建于 " __TIME__ ", " __DATE__ ")  由 NKXingXh 翻译");
+        ImGui::TextUnformatted("SDR++ 简体中文 v" VERSION_STR " (构建于 " __TIME__ ", " __DATE__ ")");
 
         ImGui::EndPopup();
         ImGui::PopStyleColor();
