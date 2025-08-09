@@ -23,6 +23,12 @@ SDR++ 是一款跨平台且开源的软件定义无线电 (SDR) 软件，其设�
 
 # 安装
 
+## 简体中文版本
+
+[博客介绍](https://blog.nkxingxh.top/archives/591)
+
+[蓝奏云](https://nkxingxh.lanzoul.com/b01oqwcpah)
+
 ## 夜间构建
 
 *译者注: 当前分支并没有每夜构建。*
