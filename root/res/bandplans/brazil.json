@@ -1,6 +1,6 @@
 {
-    "name": "Brazilian Ham Bands",
-    "country_name": "Brazil",
+    "name": "巴西Ham频段",
+    "country_name": "巴西",
     "country_code": "BR",
     "author_name": "Rafael Beraldo",
     "author_url": "https://github.com/rberaldo/",
@@ -9,19 +9,19 @@
             "start": 135700,
             "end": 137800,
             "type": "amateur",
-            "name": "2200m Ham Band CW, Digital"
+            "name": "2200m 业余无线电频段 CW, Digital"
         },
         {
             "start": 472000,
             "end": 479000,
             "type": "amateur",
-            "name": "635m Ham Band CW, Digital"
+            "name": "635m 业余无线电频段 CW, Digital"
         },
         {
             "start": 1800000,
             "end": 1810000,
             "type": "amateur",
-            "name": "|160m Ham Band CW, Digital"
+            "name": "|160m 业余无线电频段 CW, Digital"
         },
         {
             "start": 1810000,
@@ -51,13 +51,13 @@
             "start": 1850000,
             "end": 2000000,
             "type": "amateur1",
-            "name": "CW, SSB, AM, DV, Digital 160 Ham Band|"
+            "name": "CW, SSB, AM, DV, Digital 160 业余无线电频段|"
         },
         {
             "start": 3500000,
             "end": 3570000,
             "type": "amateur",
-            "name": "|80m Ham Band CW"
+            "name": "|80m 业余无线电频段 CW"
         },
         {
             "start": 3570000,
@@ -93,13 +93,13 @@
             "start": 3875000,
             "end": 4000000,
             "type": "amateur",
-            "name": "CW, SSD, AM, DV, Digital, 80m Ham Band|"
+            "name": "CW, SSD, AM, DV, Digital, 80m 业余无线电频段|"
         },
         {
             "start": 5351500,
             "end": 5354000,
             "type": "amateur",
-            "name": "|60m Ham Band CW, Digital"
+            "name": "|60m 业余无线电频段 CW, Digital"
         },
         {
             "start": 5354000,
@@ -111,13 +111,13 @@
             "start": 5366000,
             "end": 5366500,
             "type": "amateur",
-            "name": "CW, Digital 60m Ham Band|"
+            "name": "CW, Digital 60m 业余无线电频段|"
         },
         {
             "start": 7000000,
             "end": 7040000,
             "type": "amateur",
-            "name": "|40m Ham Band CW"
+            "name": "|40m 业余无线电频段 CW"
         },
         {
             "start": 7040000,
@@ -141,25 +141,25 @@
             "start": 7100000,
             "end": 7300000,
             "type": "amateur",
-            "name": "CW, SSB, AM, DV, Digital 40m Ham Band|"
+            "name": "CW, SSB, AM, DV, Digital 40m 业余无线电频段|"
         },
         {
             "start": 10100000,
             "end": 10130000,
             "type": "amateur",
-            "name": "|30m Ham Band"
+            "name": "|30m 业余无线电频段"
         },
         {
             "start": 10130000,
             "end": 10150000,
             "type": "amateur1",
-            "name": "CW, Digital 30m Ham Band|"
+            "name": "CW, Digital 30m 业余无线电频段|"
         },
         {
             "start": 14000000,
             "end": 14070000,
             "type": "amateur",
-            "name": "|20m Ham Band CW"
+            "name": "|20m 业余无线电频段 CW"
         },
         {
             "start": 14070000,
@@ -183,13 +183,13 @@
             "start": 14285000,
             "end": 14350000,
             "type": "amateur",
-            "name": "CW, SSB, AM, DV, Digital 20m Ham Band|"
+            "name": "CW, SSB, AM, DV, Digital 20m 业余无线电频段|"
         },
         {
             "start": 18068000,
             "end": 18095000,
             "type": "amateur",
-            "name": "|17m Ham Band CW"
+            "name": "|17m 业余无线电频段 CW"
         },
         {
             "start": 18095000,
@@ -207,13 +207,13 @@
             "start": 18111000,
             "end": 18168000,
             "type": "amateur1",
-            "name": "CW, SSB, DV, Digital 17m Ham Band|"
+            "name": "CW, SSB, DV, Digital 17m 业余无线电频段|"
         },
         {
             "start": 21000000,
             "end": 21070000,
             "type": "amateur",
-            "name": "|15m Ham Band CW"
+            "name": "|15m 业余无线电频段 CW"
         },
         {
             "start": 21070000,
@@ -237,13 +237,13 @@
             "start": 21380000,
             "end": 21450000,
             "type": "amateur",
-            "name": "CW, SSB, AM, DV, Digital 15m Ham Band|"
+            "name": "CW, SSB, AM, DV, Digital 15m 业余无线电频段|"
         },
         {
             "start": 24890000,
             "end": 24915000,
             "type": "amateur",
-            "name": "|12m Ham Band CW"
+            "name": "|12m 业余无线电频段 CW"
         },
         {
             "start": 24915000,
@@ -261,13 +261,13 @@
             "start": 24931000,
             "end": 24990000,
             "type": "amateur1",
-            "name": "CW, SSB, DV, Digital 12m Ham Band|"
+            "name": "CW, SSB, DV, Digital 12m 业余无线电频段|"
         },
         {
             "start": 28000000,
             "end": 28070000,
             "type": "amateur",
-            "name": "|10m Ham Band CW"
+            "name": "|10m 业余无线电频段 CW"
         },
         {
             "start": 28070000,
@@ -339,19 +339,19 @@
             "start": 29620000,
             "end": 29700000,
             "type": "amateur",
-            "name": "FM, DV - Repeater output 10m Ham Band|"
+            "name": "FM, DV - Repeater output 10m 业余无线电频段|"
         },
         {
             "start": 50000000,
             "end": 54000000,
             "type": "amateur",
-            "name": "6m Ham Band"
+            "name": "6m 业余无线电频段"
         },
         {
             "start": 144000000,
             "end": 144025000,
             "type": "amateur",
-            "name": "|2m Ham Band All Modes - Satellites"
+            "name": "|2m 业余无线电频段 All Modes - Satellites"
         },
         {
             "start": 144025000,
@@ -489,19 +489,19 @@
             "start": 147590000,
             "end": 148000000,
             "type": "amateur1",
-            "name": "FM, DV - Repeater output 2m Ham Band|"
+            "name": "FM, DV - Repeater output 2m 业余无线电频段|"
         },
         {
             "start": 220000000,
             "end": 225000000,
             "type": "amateur",
-            "name": "1.3m Ham Band"
+            "name": "1.3m 业余无线电频段"
         },
         {
             "start": 430000000,
             "end": 432000000,
             "type": "amateur",
-            "name": "|70cm Ham Band All Modes"
+            "name": "|70cm 业余无线电频段 All Modes"
         },
         {
             "start": 432000000,
@@ -573,73 +573,73 @@
             "start": 439000000,
             "end": 440000000,
             "type": "amateur",
-            "name": "FM, DV - Repeater output 70cm Ham Band|"
+            "name": "FM, DV - Repeater output 70cm 业余无线电频段|"
         },
         {
             "start": 902000000,
             "end": 928000000,
             "type": "amateur",
-            "name": "33cm Ham Band"
+            "name": "33cm 业余无线电频段"
         },
         {
             "start": 1240000000,
             "end": 1300000000,
             "type": "amateur",
-            "name": "23cm Ham Band"
+            "name": "23cm 业余无线电频段"
         },
         {
             "start": 2330000000,
             "end": 2450000000,
             "type": "amateur",
-            "name": "13cm Ham Band"
+            "name": "13cm 业余无线电频段"
         },
         {
             "start": 3400000000,
             "end": 3500000000,
             "type": "amateur",
-            "name": "9cm Ham Band"
+            "name": "9cm 业余无线电频段"
         },
         {
             "start": 5650000000,
             "end": 5925000000,
             "type": "amateur",
-            "name": "5cm Ham Band"
+            "name": "5cm 业余无线电频段"
         },
         {
             "start": 10000000000,
             "end": 10500000000,
             "type": "amateur",
-            "name": "3cm Ham Band"
+            "name": "3cm 业余无线电频段"
         },
         {
             "start": 24000000000,
             "end": 24250000000,
             "type": "amateur",
-            "name": "1.2cm Ham Band"
+            "name": "1.2cm 业余无线电频段"
         },
         {
             "start": 47000000000,
             "end": 47200000000,
             "type": "amateur",
-            "name": "6mm Ham Band"
+            "name": "6mm 业余无线电频段"
         },
         {
             "start": 122250000000,
             "end": 123000000000,
             "type": "amateur",
-            "name": "2.5mm Ham Band"
+            "name": "2.5mm 业余无线电频段"
         },
         {
             "start": 134000000000,
             "end": 141000000000,
             "type": "amateur",
-            "name": "2mm Ham Band"
+            "name": "2mm 业余无线电频段"
         },
         {
             "start": 241000000000,
             "end": 250000000000,
             "type": "amateur",
-            "name": "1mm Ham Band"
+            "name": "1mm 业余无线电频段"
         }
     ]
 }

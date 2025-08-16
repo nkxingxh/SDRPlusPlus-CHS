@@ -1,18 +1,18 @@
 {
-  "name": "Australia",
-  "country_name": "Australia",
+  "name": "澳大利亚",
+  "country_name": "澳大利亚",
   "country_code": "AU",
   "author_name": "Owen",
   "author_url": "https://github.com/Ozies",
   "bands": [
     {
-      "name": "2200m Ham Band",
+      "name": "2200m 业余无线电频段",
       "type": "amateur",
       "start": 135700,
       "end": 137800
     },
     {
-      "name": "630m Ham Band",
+      "name": "630m 业余无线电频段",
       "type": "amateur",
       "start": 472000,
       "end": 479000
@@ -24,151 +24,151 @@
       "end": 1710000
     },
     {
-      "name": "160m Ham Band",
+      "name": "160m 业余无线电频段",
       "type": "amateur",
       "start": 1800000,
       "end": 1875000
     },
     {
-      "name": "Shortwave Broadcast",
+      "name": "短波广播",
       "type": "broadcast",
       "start": 2300000,
       "end": 2468000
     },
     {
-      "name": "Shortwave Broadcast",
+      "name": "短波广播",
       "type": "broadcast",
       "start": 3200000,
       "end": 3400000
     },
     {
-      "name": "80m Ham Band",
+      "name": "80m 业余无线电频段",
       "type": "amateur",
       "start": 3500000,
       "end": 3700000
     },
     {
-      "name": "80m Ham Band",
+      "name": "80m 业余无线电频段",
       "type": "amateur",
       "start": 3776000,
       "end": 3800000
     },
     {
-      "name": "Shortwave Broadcast",
+      "name": "短波广播",
       "type": "broadcast",
       "start": 3950000,
       "end": 4000000
     },
     {
-      "name": "Shortwave Broadcast",
+      "name": "短波广播",
       "type": "broadcast",
       "start": 4750000,
       "end": 4995000
     },
     {
-      "name": "Shortwave Broadcast",
+      "name": "短波广播",
       "type": "broadcast",
       "start": 5005000,
       "end": 5060000
     },
     {
-      "name": "60m Ham Band (Unavailable)",
+      "name": "60m 业余无线电频段 (Unavailable)",
       "type": "amateur",
       "start": 5351500,
       "end": 5366500
     },
     {
-      "name": "Shortwave Broadcast",
+      "name": "短波广播",
       "type": "broadcast",
       "start": 5900000,
       "end": 6200000
     },
     {
-      "name": "40m Ham Band",
+      "name": "40m 业余无线电频段",
       "type": "amateur",
       "start": 7000000,
       "end": 7300000
     },
     {
-      "name": "Shortwave Broadcast",
+      "name": "短波广播",
       "type": "broadcast",
       "start": 7200000,
       "end": 7450000
     },
     {
-      "name": "Shortwave Broadcast",
+      "name": "短波广播",
       "type": "broadcast",
       "start": 9400000,
       "end": 9900000
     },
     {
-      "name": "30m Ham Band",
+      "name": "30m 业余无线电频段",
       "type": "amateur",
       "start": 10100000,
       "end": 10150000
     },
     {
-      "name": "Shortwave Broadcast",
+      "name": "短波广播",
       "type": "broadcast",
       "start": 11600000,
       "end": 12100000
     },
     {
-      "name": "Shortwave Broadcast",
+      "name": "短波广播",
       "type": "broadcast",
       "start": 13570000,
       "end": 13870000
     },
     {
-      "name": "20m Ham Band",
+      "name": "20m 业余无线电频段",
       "type": "amateur",
       "start": 14000000,
       "end": 14350000
     },
     {
-      "name": "Shortwave Broadcast",
+      "name": "短波广播",
       "type": "broadcast",
       "start": 15100000,
       "end": 15800000
     },
     {
-      "name": "Shortwave Broadcast",
+      "name": "短波广播",
       "type": "broadcast",
       "start": 17480000,
       "end": 17900000
     },
     {
-      "name": "17m Ham Band",
+      "name": "17m 业余无线电频段",
       "type": "amateur",
       "start": 18068000,
       "end": 18168000
     },
     {
-      "name": "Shortwave Broadcast",
+      "name": "短波广播",
       "type": "broadcast",
       "start": 18900000,
       "end": 19020000
     },
     {
-      "name": "15m Ham Band",
+      "name": "15m 业余无线电频段",
       "type": "amateur",
       "start": 21000000,
       "end": 21450000
     },
     {
-      "name": "Shortwave Broadcast",
+      "name": "短波广播",
       "type": "broadcast",
       "start": 21450000,
       "end": 21850000
     },
     {
-      "name": "12m Ham Band",
+      "name": "12m 业余无线电频段",
       "type": "amateur",
       "start": 24890000,
       "end": 24990000
     },
     {
-      "name": "Shortwave Broadcast",
+      "name": "短波广播",
       "type": "broadcast",
       "start": 25670000,
       "end": 26100000
@@ -186,19 +186,19 @@
       "end": 27980000
     },
     {
-      "name": "10m Ham Band",
+      "name": "10m 业余无线电频段",
       "type": "amateur",
       "start": 28000000,
       "end": 29700000
     },
     {
-      "name": "6m Ham Band",
+      "name": "6m 业余无线电频段",
       "type": "amateur",
       "start": 50000000,
       "end": 54000000
     },
     {
-      "name": "FM Broadcast",
+      "name": "FM 广播",
       "type": "broadcast",
       "start": 87500000,
       "end": 108000000
@@ -222,7 +222,7 @@
       "end": 138000000
     },
     {
-      "name": "2m Ham Band",
+      "name": "2m 业余无线电频段",
       "type": "amateur",
       "start": 144000000,
       "end": 148000000
@@ -252,7 +252,7 @@
       "end": 230000000
     },
     {
-      "name": "70cm Ham Band",
+      "name": "70cm 业余无线电频段",
       "type": "amateur",
       "start": 430000000,
       "end": 450000000
@@ -276,13 +276,13 @@
       "end": 928000000
     },
     {
-      "name": "23cm Ham Band",
+      "name": "23cm 业余无线电频段",
       "type": "amateur",
       "start": 1240000000,
       "end": 1300000000
     },
     {
-      "name": "13cm Ham Band",
+      "name": "13cm 业余无线电频段",
       "type": "amateur",
       "start": 2300000000,
       "end": 2302000000
@@ -294,19 +294,19 @@
       "end": 2483500000
     },
     {
-      "name": "13cm Ham Band",
+      "name": "13cm 业余无线电频段",
       "type": "amateur",
       "start": 2400000000,
       "end": 2450000000
     },
     {
-      "name": "9cm Ham Band",
+      "name": "9cm 业余无线电频段",
       "type": "amateur",
       "start": 3300000000,
       "end": 3400000000
     },
     {
-      "name": "9cm Ham Band (Restricted)",
+      "name": "9cm 业余无线电频段 (Restricted)",
       "type": "amateur",
       "start": 3400000000,
       "end": 3600000000
@@ -324,49 +324,49 @@
       "end": 5835000000
     },
     {
-      "name": "6cm Ham Band",
+      "name": "6cm 业余无线电频段",
       "type": "amateur",
       "start": 5650000000,
       "end": 5850000000
     },
     {
-      "name": "3cm Ham Band",
+      "name": "3cm 业余无线电频段",
       "type": "amateur",
       "start": 10000000000,
       "end": 10500000000
     },
     {
-      "name": "12mm Ham Band",
+      "name": "12mm 业余无线电频段",
       "type": "amateur",
       "start": 24000000000,
       "end": 24250000000
     },
     {
-      "name": "6mm Ham Band",
+      "name": "6mm 业余无线电频段",
       "type": "amateur",
       "start": 47000000000,
       "end": 47200000000
     },
     {
-      "name": "4mm Ham Band",
+      "name": "4mm 业余无线电频段",
       "type": "amateur",
       "start": 76000000000,
       "end": 81000000000
     },
     {
-      "name": "122-123GHz Ham Band",
+      "name": "122-123GHz 业余无线电频段",
       "type": "amateur",
       "start": 122250000000,
       "end": 123000000000
     },
     {
-      "name": "134-141GHz Ham Band",
+      "name": "134-141GHz 业余无线电频段",
       "type": "amateur",
       "start": 134000000000,
       "end": 141000000000
     },
     {
-      "name": "241-250GHz Ham Band",
+      "name": "241-250GHz 业余无线电频段",
       "type": "amateur",
       "start": 241000000000,
       "end": 250000000000

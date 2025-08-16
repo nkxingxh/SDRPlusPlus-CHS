@@ -1,6 +1,6 @@
 {
-  "name": "Belgium",
-  "country_name": "Belgium",
+  "name": "比利时",
+  "country_name": "比利时",
   "country_code": "BE",
   "author_name": "Bastien Cabay - ON4BCY",
   "author_url": "https://qrz.com/db/ON4BCY",
@@ -24,7 +24,7 @@
       "end": 504000
     },
     {
-      "name": "AM Broadcast",
+      "name": "AM 广播",
       "type": "broadcast",
       "start": 526500,
       "end": 1606500
@@ -48,7 +48,7 @@
       "end": 5366500
     },
     {
-      "name": "AM Broadcast",
+      "name": "AM 广播",
       "type": "broadcast",
       "start": 5950000,
       "end": 6200000
@@ -60,13 +60,13 @@
       "end": 7200000
     },
     {
-      "name": "AM Broadcast",
+      "name": "AM 广播",
       "type": "broadcast",
       "start": 7200000,
       "end": 7300000
     },
     {
-      "name": "AM Broadcast",
+      "name": "AM 广播",
       "type": "broadcast",
       "start": 9500000,
       "end": 9900000
@@ -78,13 +78,13 @@
       "end": 10150000
     },
     {
-      "name": "AM Broadcast",
+      "name": "AM 广播",
       "type": "broadcast",
       "start": 11650000,
       "end": 12050000
     },
     {
-      "name": "AM Broadcast",
+      "name": "AM 广播",
       "type": "broadcast",
       "start": 13600000,
       "end": 13800000
@@ -96,13 +96,13 @@
       "end": 14350000
     },
     {
-      "name": "AM Broadcast",
+      "name": "AM 广播",
       "type": "broadcast",
       "start": 15100000,
       "end": 15600000
     },
     {
-      "name": "AM Broadcast",
+      "name": "AM 广播",
       "type": "broadcast",
       "start": 17550000,
       "end": 17900000
@@ -120,7 +120,7 @@
       "end": 21450000
     },
     {
-      "name": "AM Broadcast",
+      "name": "AM 广播",
       "type": "broadcast",
       "start": 21450000,
       "end": 21850000
@@ -132,7 +132,7 @@
       "end": 24990000
     },
     {
-      "name": "AM Broadcast",
+      "name": "AM 广播",
       "type": "broadcast",
       "start": 25670000,
       "end": 26100000
@@ -174,7 +174,7 @@
       "end": 70412500
     },
     {
-      "name": "FM Broadcast",
+      "name": "FM 广播",
       "type": "broadcast",
       "start": 87500000,
       "end": 108000000
@@ -193,7 +193,7 @@
     },
 
     {
-      "name": "T-DAB Broadcast",
+      "name": "T-DAB 广播",
       "type": "broadcast",
       "start": 174000000,
       "end": 223000000
@@ -211,7 +211,7 @@
       "end": 446200000
     },
     {
-      "name": "DVB-T - Broadcast",
+      "name": "DVB-T - 广播",
       "type": "broadcast",
       "start": 470000000,
       "end": 790000000

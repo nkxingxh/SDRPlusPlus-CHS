@@ -1,18 +1,18 @@
 {
-    "name": "Ireland",
-    "country_name": "Republic Of Ireland",
+    "name": "爱尔兰",
+    "country_name": "爱尔兰共和国",
     "country_code": "IE",
     "author_name": "Oskar Dudek",
     "author_url": "",
     "bands": [
         {
-            "name": "2200m Ham Band",
+            "name": "2200m 业余无线电频段",
             "type": "amateur",
             "start": 135700,
             "end": 137800
         },
         {
-            "name": "Long wave",
+            "name": "长波",
             "type": "broadcast",
             "start": 148500,
             "end": 282500
@@ -36,7 +36,7 @@
             "end": 2495000
         },
         {
-            "name": "90m SW Broadcast",
+            "name": "90m SW 广播",
             "type": "broadcast",
             "start": 3200000,
             "end": 3400000
@@ -48,13 +48,13 @@
             "end": 3800000
         },
         {
-            "name": "75m SW Broadcast",
+            "name": "75m SW 广播",
             "type": "broadcast",
             "start": 3900000,
             "end": 4000000
         },
         {
-            "name": "60m SW Broadcast",
+            "name": "60m SW 广播",
             "type": "broadcast",
             "start": 4750000,
             "end": 5060000
@@ -66,7 +66,7 @@
             "end": 5366500
         },
         {
-            "name": "49m SW Broadcast",
+            "name": "49m SW 广播",
             "type": "broadcast",
             "start": 5900000,
             "end": 6200000
@@ -78,13 +78,13 @@
             "end": 7200000
         },
         {
-            "name": "40m SW Broadcast",
+            "name": "40m SW 广播",
             "type": "broadcast",
             "start": 7200000,
             "end": 7450000
         },
         {
-            "name": "31m SW Broadcast",
+            "name": "31m SW 广播",
             "type": "broadcast",
             "start": 9400000,
             "end": 9900000
@@ -96,13 +96,13 @@
             "end": 10150000
         },
         {
-            "name": "25m SW Broadcast",
+            "name": "25m SW 广播",
             "type": "broadcast",
             "start": 11600000,
             "end": 12100000
         },
         {
-            "name": "22m SW Broadcast",
+            "name": "22m SW 广播",
             "type": "broadcast",
             "start": 13570000,
             "end": 13870000
@@ -114,7 +114,7 @@
             "end": 14350000
         },
         {
-            "name": "19m SW Broadcast",
+            "name": "19m SW 广播",
             "type": "broadcast",
             "start": 15100000,
             "end": 15800000
@@ -126,13 +126,13 @@
             "end": 18168000
         },
         {
-            "name": "16m SW Broadcast",
+            "name": "16m SW 广播",
             "type": "broadcast",
             "start": 17480000,
             "end": 17900000
         },
         {
-            "name": "15m SW Broadcast",
+            "name": "15m SW 广播",
             "type": "broadcast",
             "start": 18900000,
             "end": 19020000
@@ -144,7 +144,7 @@
             "end": 21450000
         },
         {
-            "name": "13m SW Broadcast",
+            "name": "13m SW 广播",
             "type": "broadcast",
             "start": 21450000,
             "end": 21850000
@@ -156,7 +156,7 @@
             "end": 24990000
         },
         {
-            "name": "11m SW Broadcast",
+            "name": "11m SW 广播",
             "type": "broadcast",
             "start": 25670000,
             "end": 26100000
@@ -174,7 +174,7 @@
             "end": 29700000
         },
         {
-            "name": "FM Broadcast",
+            "name": "FM 广播",
             "type": "broadcast",
             "start": 87500000,
             "end": 108000000
