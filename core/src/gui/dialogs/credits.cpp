@@ -32,7 +32,7 @@ namespace credits {
         ImGui::Spacing();
         ImGui::Spacing();
 
-        ImGui::TextUnformatted("简体中文版本由 NKXingXh (BG5JRE) 翻译。\n");
+        ImGui::TextUnformatted("简体中文版本由 NKXingXh (BG5JRE) 翻译。当前版本使用了 MiSans 字体。\n");
         ImGui::TextUnformatted("这个软件由 Alexandre Rouma (ON5RYZ) 在下列人员的帮助下为您带来\n\n");
 
         ImGui::Columns(4, "CreditColumns", true);
