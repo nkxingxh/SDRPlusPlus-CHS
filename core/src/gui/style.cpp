@@ -35,6 +35,7 @@ namespace style {
         baseBuilder.AddRanges(fonts->GetGlyphRangesChineseSimplifiedCommon());
         // 补充字: 噪、帧、抑、辑、频、馈
         const ImWchar extraRange[] = {0x566A, 0x566A, 0x5E27, 0x5E27, 0x6291, 0x6291, 0x8F91, 0x8F91, 0x9891, 0x9891, 0x9988, 0x9988, 0};
+        baseBuilder.AddRanges(extraRange);
 #else
         baseBuilder.AddRanges(fonts->GetGlyphRangesChineseFull());
 #endif
