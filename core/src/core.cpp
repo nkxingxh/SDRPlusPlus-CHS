@@ -163,55 +163,55 @@ int sdrpp_main(int argc, char* argv[]) {
     defConfig["min"] = -120.0;
 
     // Module instances
-    defConfig["moduleInstances"]["Airspy Source"]["module"] = "airspy_source";
-    defConfig["moduleInstances"]["Airspy Source"]["enabled"] = true;
-    defConfig["moduleInstances"]["AirspyHF+ Source"]["module"] = "airspyhf_source";
-    defConfig["moduleInstances"]["AirspyHF+ Source"]["enabled"] = true;
-    defConfig["moduleInstances"]["Audio Source"]["module"] = "audio_source";
-    defConfig["moduleInstances"]["Audio Source"]["enabled"] = true;
-    defConfig["moduleInstances"]["BladeRF Source"]["module"] = "bladerf_source";
-    defConfig["moduleInstances"]["BladeRF Source"]["enabled"] = true;
-    defConfig["moduleInstances"]["File Source"]["module"] = "file_source";
-    defConfig["moduleInstances"]["File Source"]["enabled"] = true;
-    defConfig["moduleInstances"]["FobosSDR Source"]["module"] = "fobossdr_source";
-    defConfig["moduleInstances"]["FobosSDR Source"]["enabled"] = true;
-    defConfig["moduleInstances"]["HackRF Source"]["module"] = "hackrf_source";
-    defConfig["moduleInstances"]["HackRF Source"]["enabled"] = true;
-    defConfig["moduleInstances"]["Harogic Source"]["module"] = "harogic_source";
-    defConfig["moduleInstances"]["Harogic Source"]["enabled"] = true;
-    defConfig["moduleInstances"]["Hermes Source"]["module"] = "hermes_source";
-    defConfig["moduleInstances"]["Hermes Source"]["enabled"] = true;
-    defConfig["moduleInstances"]["HydraSDR Source"]["module"] = "hydrasdr_source";
-    defConfig["moduleInstances"]["HydraSDR Source"]["enabled"] = true;
-    defConfig["moduleInstances"]["LimeSDR Source"]["module"] = "limesdr_source";
-    defConfig["moduleInstances"]["LimeSDR Source"]["enabled"] = true;
-    defConfig["moduleInstances"]["Network Source"]["module"] = "network_source";
-    defConfig["moduleInstances"]["Network Source"]["enabled"] = true;
-    defConfig["moduleInstances"]["PerseusSDR Source"]["module"] = "perseus_source";
-    defConfig["moduleInstances"]["PerseusSDR Source"]["enabled"] = true;
-    defConfig["moduleInstances"]["PlutoSDR Source"]["module"] = "plutosdr_source";
-    defConfig["moduleInstances"]["PlutoSDR Source"]["enabled"] = true;
-    defConfig["moduleInstances"]["RFNM Source"]["module"] = "rfnm_source";
-    defConfig["moduleInstances"]["RFNM Source"]["enabled"] = true;
-    defConfig["moduleInstances"]["RFspace Source"]["module"] = "rfspace_source";
-    defConfig["moduleInstances"]["RFspace Source"]["enabled"] = true;
-    defConfig["moduleInstances"]["RTL-SDR Source"]["module"] = "rtl_sdr_source";
-    defConfig["moduleInstances"]["RTL-SDR Source"]["enabled"] = true;
-    defConfig["moduleInstances"]["RTL-TCP Source"]["module"] = "rtl_tcp_source";
-    defConfig["moduleInstances"]["RTL-TCP Source"]["enabled"] = true;
-    defConfig["moduleInstances"]["SDRplay Source"]["module"] = "sdrplay_source";
-    defConfig["moduleInstances"]["SDRplay Source"]["enabled"] = true;
-    defConfig["moduleInstances"]["SDR++ Server Source"]["module"] = "sdrpp_server_source";
-    defConfig["moduleInstances"]["SDR++ Server Source"]["enabled"] = true;
-    defConfig["moduleInstances"]["Spectran HTTP Source"]["module"] = "spectran_http_source";
-    defConfig["moduleInstances"]["Spectran HTTP Source"]["enabled"] = true;
-    defConfig["moduleInstances"]["SpyServer Source"]["module"] = "spyserver_source";
-    defConfig["moduleInstances"]["SpyServer Source"]["enabled"] = true;
-    defConfig["moduleInstances"]["USRP Source"]["module"] = "usrp_source";
-    defConfig["moduleInstances"]["USRP Source"]["enabled"] = true;
+    defConfig["moduleInstances"]["Airspy 信号源"]["module"] = "airspy_source";
+    defConfig["moduleInstances"]["Airspy 信号源"]["enabled"] = true;
+    defConfig["moduleInstances"]["AirspyHF+ 信号源"]["module"] = "airspyhf_source";
+    defConfig["moduleInstances"]["AirspyHF+ 信号源"]["enabled"] = true;
+    defConfig["moduleInstances"]["Audio 信号源"]["module"] = "audio_source";
+    defConfig["moduleInstances"]["Audio 信号源"]["enabled"] = true;
+    defConfig["moduleInstances"]["BladeRF 信号源"]["module"] = "bladerf_source";
+    defConfig["moduleInstances"]["BladeRF 信号源"]["enabled"] = true;
+    defConfig["moduleInstances"]["File 信号源"]["module"] = "file_source";
+    defConfig["moduleInstances"]["File 信号源"]["enabled"] = true;
+    defConfig["moduleInstances"]["FobosSDR 信号源"]["module"] = "fobossdr_source";
+    defConfig["moduleInstances"]["FobosSDR 信号源"]["enabled"] = true;
+    defConfig["moduleInstances"]["HackRF 信号源"]["module"] = "hackrf_source";
+    defConfig["moduleInstances"]["HackRF 信号源"]["enabled"] = true;
+    defConfig["moduleInstances"]["Harogic 信号源"]["module"] = "harogic_source";
+    defConfig["moduleInstances"]["Harogic 信号源"]["enabled"] = true;
+    defConfig["moduleInstances"]["Hermes 信号源"]["module"] = "hermes_source";
+    defConfig["moduleInstances"]["Hermes 信号源"]["enabled"] = true;
+    defConfig["moduleInstances"]["HydraSDR 信号源"]["module"] = "hydrasdr_source";
+    defConfig["moduleInstances"]["HydraSDR 信号源"]["enabled"] = true;
+    defConfig["moduleInstances"]["LimeSDR 信号源"]["module"] = "limesdr_source";
+    defConfig["moduleInstances"]["LimeSDR 信号源"]["enabled"] = true;
+    defConfig["moduleInstances"]["Network 信号源"]["module"] = "network_source";
+    defConfig["moduleInstances"]["Network 信号源"]["enabled"] = true;
+    defConfig["moduleInstances"]["PerseusSDR 信号源"]["module"] = "perseus_source";
+    defConfig["moduleInstances"]["PerseusSDR 信号源"]["enabled"] = true;
+    defConfig["moduleInstances"]["PlutoSDR 信号源"]["module"] = "plutosdr_source";
+    defConfig["moduleInstances"]["PlutoSDR 信号源"]["enabled"] = true;
+    defConfig["moduleInstances"]["RFNM 信号源"]["module"] = "rfnm_source";
+    defConfig["moduleInstances"]["RFNM 信号源"]["enabled"] = true;
+    defConfig["moduleInstances"]["RFspace 信号源"]["module"] = "rfspace_source";
+    defConfig["moduleInstances"]["RFspace 信号源"]["enabled"] = true;
+    defConfig["moduleInstances"]["RTL-SDR 信号源"]["module"] = "rtl_sdr_source";
+    defConfig["moduleInstances"]["RTL-SDR 信号源"]["enabled"] = true;
+    defConfig["moduleInstances"]["RTL-TCP 信号源"]["module"] = "rtl_tcp_source";
+    defConfig["moduleInstances"]["RTL-TCP 信号源"]["enabled"] = true;
+    defConfig["moduleInstances"]["SDRplay 信号源"]["module"] = "sdrplay_source";
+    defConfig["moduleInstances"]["SDRplay 信号源"]["enabled"] = true;
+    defConfig["moduleInstances"]["SDR++ Server 信号源"]["module"] = "sdrpp_server_source";
+    defConfig["moduleInstances"]["SDR++ Server 信号源"]["enabled"] = true;
+    defConfig["moduleInstances"]["Spectran HTTP 信号源"]["module"] = "spectran_http_source";
+    defConfig["moduleInstances"]["Spectran HTTP 信号源"]["enabled"] = true;
+    defConfig["moduleInstances"]["SpyServer 信号源"]["module"] = "spyserver_source";
+    defConfig["moduleInstances"]["SpyServer 信号源"]["enabled"] = true;
+    defConfig["moduleInstances"]["USRP 信号源"]["module"] = "usrp_source";
+    defConfig["moduleInstances"]["USRP 信号源"]["enabled"] = true;
 
-    defConfig["moduleInstances"]["Audio Sink"] = "audio_sink";
-    defConfig["moduleInstances"]["Network Sink"] = "network_sink";
+    defConfig["moduleInstances"]["音频输出"] = "audio_sink";
+    defConfig["moduleInstances"]["网络输出"] = "network_sink";
 
     defConfig["moduleInstances"]["电台"] = "radio";
 
@@ -380,21 +380,21 @@ int sdrpp_main(int argc, char* argv[]) {
     thememenu::init(resDir);
     LoadingScreen::init();
 
-    LoadingScreen::show("Loading icons");
-    flog::info("Loading icons");
+    LoadingScreen::show("正在加载图标");
+    flog::info("正在加载图标");
     if (!icons::load(resDir)) { return -1; }
 
-    LoadingScreen::show("Loading band plans");
-    flog::info("Loading band plans");
+    LoadingScreen::show("正在加载频段划分表");
+    flog::info("正在加载频段划分表");
     bandplan::loadFromDir(resDir + "/bandplans");
 
-    LoadingScreen::show("Loading band plan colors");
-    flog::info("Loading band plans color table");
+    LoadingScreen::show("正在加载频段颜色映射");
+    flog::info("正在加载频段颜色映射");
     bandplan::loadColorTable(bandColors);
 
     gui::mainWindow.init();
 
-    flog::info("Ready.");
+    flog::info("就绪。");
 
     // Run render loop (TODO: CHECK RETURN VALUE)
     backend::renderLoop();
