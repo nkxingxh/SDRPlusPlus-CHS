@@ -46,8 +46,8 @@ public:
         deempModes.define("75us", DEEMP_MODE_75US);
 
         ifnrPresets.define("NOAA APT", IFNR_PRESET_NOAA_APT);
-        ifnrPresets.define("Voice", IFNR_PRESET_VOICE);
-        ifnrPresets.define("Narrow Band", IFNR_PRESET_NARROW_BAND);
+        ifnrPresets.define("语音", IFNR_PRESET_VOICE);
+        ifnrPresets.define("窄带", IFNR_PRESET_NARROW_BAND);
 
         // Initialize the config if it doesn't exist
         bool created = false;

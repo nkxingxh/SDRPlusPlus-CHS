@@ -12,7 +12,7 @@
             "end": 283500
         },
         {
-            "name": "中博",
+            "name": "中波",
             "type": "broadcast",
             "start": 526500,
             "end": 1606500
@@ -186,19 +186,19 @@
             "end": 108000000
         },
         {
-            "name": "Air Band VOR/ILS",
+            "name": "航空无线电导航",
             "type": "aviation",
             "start": 108000000,
             "end": 118000000
         },
         {
-            "name": "Air Band Voice",
+            "name": "航空语音频段",
             "type": "aviation",
             "start": 118000000,
             "end": 137000000
         },
         {
-            "name": "Polar Orbiting Satellites",
+            "name": "极地轨道卫星",
             "type": "satellite",
             "start": 137000000,
             "end": 138000000
@@ -222,13 +222,13 @@
             "end": 225000000
         },
         {
-            "name": "Military Air",
+            "name": "军用航空",
             "type": "military",
             "start": 225000000,
             "end": 380000000
         },
         {
-            "name": "Military Sat",
+            "name": "军用卫星",
             "type": "military",
             "start": 240000000,
             "end": 270000000

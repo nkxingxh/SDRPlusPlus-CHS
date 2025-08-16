@@ -6,31 +6,31 @@
     "author_url": "https://tbspace.de",
     "bands": [
         {
-            "name": "LW-Amateur",
+            "name": "LW-业余无线电频段",
             "type": "amateur",
             "start": 135700,
             "end": 137800
         },
 		{
-            "name": "LW-Broadcast",
+            "name": "LW-广播",
             "type": "broadcast",
             "start": 148500,
             "end": 283500
         },
         {
-            "name": "630m-Amateur",
+            "name": "630m-业余无线电频段",
             "type": "amateur",
             "start": 472000,
             "end": 479000
         },
 		{
-            "name": "MW-Broadcast",
+            "name": "MW-广播",
             "type": "broadcast",
             "start": 526500,
             "end": 1606500
         },
         {
-            "name": "160m-Amateur",
+            "name": "160m-业余无线电频段",
             "type": "amateur",
             "start": 1810000,
             "end": 2000000
@@ -42,7 +42,7 @@
             "end": 2300000
         },
 		{
-            "name": "120m-Broadcast",
+            "name": "120m-广播",
             "type": "broadcast",
             "start": 2300000,
             "end": 2495000
@@ -54,7 +54,7 @@
             "end": 3155000
         },
 		{
-            "name": "90m-Broadcast",
+            "name": "90m-广播",
             "type": "broadcast",
             "start": 3200000,
             "end": 3400000
@@ -66,13 +66,13 @@
             "end": 3500000
         },
 		{
-            "name": "80m-Amateur",
+            "name": "80m-业余无线电频段",
             "type": "amateur",
             "start": 3500000,
             "end": 3800000
         },
 		{
-            "name": "75m-Broadcast",
+            "name": "75m-广播",
             "type": "broadcast",
             "start": 3900000,
             "end": 4000000
@@ -90,13 +90,13 @@
             "end": 4750000
         },
 		{
-            "name": "60m-Broadcast",
+            "name": "60m-广播",
             "type": "broadcast",
             "start": 4750000,
             "end": 5060000
         },
         {
-            "name": "60m-Amateur",
+            "name": "60m-业余无线电频段",
             "type": "amateur",
             "start": 5351500,
             "end": 5366500
@@ -108,7 +108,7 @@
             "end": 5730000
         },
 		{
-            "name": "49m-Broadcast",
+            "name": "49m-广播",
             "type": "broadcast",
             "start": 5900000,
             "end": 6200000
@@ -126,13 +126,13 @@
             "end": 6765000
         },
 		{
-            "name": "40m-Amateur",
+            "name": "40m-业余无线电频段",
             "type": "amateur",
             "start": 7000000,
             "end": 7200000
         },
 		{
-            "name": "41m-Broadcast",
+            "name": "41m-广播",
             "type": "broadcast",
             "start": 7200000,
             "end": 7450000
@@ -144,7 +144,7 @@
             "end": 8815000
         },
 		{
-            "name": "31m-Broadcast",
+            "name": "31m-广播",
             "type": "broadcast",
             "start": 9400000,
             "end": 9900000
@@ -162,7 +162,7 @@
             "end": 10100000
         },
 		{
-            "name": "30m-Amateur",
+            "name": "30m-业余无线电频段",
             "type": "amateur",
             "start": 10100000,
             "end": 10150000
@@ -174,7 +174,7 @@
             "end": 11400000
         },
 		{
-            "name": "25m-Broadcast",
+            "name": "25m-广播",
             "type": "broadcast",
             "start": 11600000,
             "end": 12100000
@@ -192,13 +192,13 @@
             "end": 13360000
         },
 		{
-            "name": "22m-Broadcast",
+            "name": "22m-广播",
             "type": "broadcast",
             "start": 13570000,
             "end": 13870000
         },
         {
-            "name": "20m-Amateur",
+            "name": "20m-业余无线电频段",
             "type": "amateur",
             "start": 14000000,
             "end": 14350000
@@ -216,19 +216,19 @@
             "end": 17410000
         },
 		{
-            "name": "19m-Broadcast",
+            "name": "19m-广播",
             "type": "broadcast",
             "start": 15100000,
             "end": 15800000
         },
 		{
-            "name": "16m-Broadcast",
+            "name": "16m-广播",
             "type": "broadcast",
             "start": 17480000,
             "end": 17900000
         },
         {
-            "name": "17m-Amateur",
+            "name": "17m-业余无线电频段",
             "type": "amateur",
             "start": 18068000,
             "end": 18168000
@@ -240,7 +240,7 @@
             "end": 18900000
         },
 		{
-            "name": "15m-Broadcast",
+            "name": "15m-广播",
             "type": "broadcast",
             "start": 18900000,
             "end": 19020000
@@ -252,13 +252,13 @@
             "end": 19990000
         },
 		{
-            "name": "15m-Amateur",
+            "name": "15m-业余无线电频段",
             "type": "amateur",
             "start": 21000000,
             "end": 21450000
         },
 		{
-            "name": "13m-Broadcast",
+            "name": "13m-广播",
             "type": "broadcast",
             "start": 21450000,
             "end": 21850000
@@ -276,13 +276,13 @@
             "end": 23350000
         },
         {
-            "name": "12m-Amateur",
+            "name": "12m-业余无线电频段",
             "type": "amateur",
             "start": 24890000,
             "end": 24990000
         },
 		{
-            "name": "11m-Broadcast",
+            "name": "11m-广播",
             "type": "broadcast",
             "start": 25670000,
             "end": 26100000
@@ -294,25 +294,25 @@
             "end": 27405000
         },
         {
-            "name": "10m-Amateur",
+            "name": "10m-业余无线电频段",
             "type": "amateur",
             "start": 28000000,
             "end": 29700000
         },
         {
-            "name": "6m-Amateur",
+            "name": "6m-业余无线电频段",
             "type": "amateur",
             "start": 50030000,
             "end": 51000000
         },
         {
-            "name": "4m-Amateur",
+            "name": "4m-业余无线电频段",
             "type": "amateur",
             "start": 70150000,
             "end": 70200000
         },
         {
-            "name": "FM-Broadcast",
+            "name": "FM-广播",
             "type": "broadcast",
             "start": 87500000,
             "end": 108000000
@@ -342,7 +342,7 @@
             "end": 138000000
         },
         {
-            "name": "2m-Amateur",
+            "name": "2m-业余无线电频段",
             "type": "amateur",
             "start": 144000000,
             "end": 146000000
@@ -396,7 +396,7 @@
             "end": 430000000
         },
         {
-            "name": "70cm-Amateur",
+            "name": "70cm-业余无线电频段",
             "type": "amateur",
             "start": 430000000,
             "end": 440000000
@@ -426,7 +426,7 @@
             "end": 871000000
         },
         {
-            "name": "23cm-Amateur",
+            "name": "23cm-业余无线电频段",
             "type": "amateur",
             "start": 1240000000,
             "end": 1300000000
@@ -438,25 +438,25 @@
             "end": 2000000000
         },
         {
-            "name": "13cm-Amateur",
+            "name": "13cm-业余无线电频段",
             "type": "amateur",
             "start": 2320000000,
             "end": 2450000000
         },
 		{
-            "name": "9cm-Amateur",
+            "name": "9cm-业余无线电频段",
             "type": "amateur",
             "start": 3400000000,
             "end": 3475000000
         },
 		{
-            "name": "6cm-Amateur",
+            "name": "6cm-业余无线电频段",
             "type": "amateur",
             "start": 5650000000,
             "end": 5850000000
         },
 		{
-            "name": "3cm-Amateur",
+            "name": "3cm-业余无线电频段",
             "type": "amateur",
             "start": 10000000000,
             "end": 10500000000

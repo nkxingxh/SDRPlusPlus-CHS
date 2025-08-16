@@ -6,19 +6,19 @@
   "author_url": "https://qrz.com/db/ON4BCY",
   "bands": [
     {
-      "name": "2200m - Amateur",
+      "name": "2200m - 业余无线电频段",
       "type": "amateur",
       "start": 135700,
       "end": 137800
     },
     {
-      "name": "630m - Amateur",
+      "name": "630m - 业余无线电频段",
       "type": "amateur",
       "start": 472000,
       "end": 479000
     },
     {
-      "name": "600m - Amateur",
+      "name": "600m - 业余无线电频段",
       "type": "amateur",
       "start": 501000,
       "end": 504000
@@ -30,19 +30,19 @@
       "end": 1606500
     },
     {
-      "name": "160m - Amateur",
+      "name": "160m - 业余无线电频段",
       "type": "amateur",
       "start": 1810000,
       "end": 2000000
     },
     {
-      "name": "80m - Amateur",
+      "name": "80m - 业余无线电频段",
       "type": "amateur",
       "start": 3500000,
       "end": 3800000
     },
     {
-      "name": "60m - Amateur",
+      "name": "60m - 业余无线电频段",
       "type": "amateur",
       "start": 5351500,
       "end": 5366500
@@ -54,7 +54,7 @@
       "end": 6200000
     },
     {
-      "name": "40m - Amateur",
+      "name": "40m - 业余无线电频段",
       "type": "amateur",
       "start": 7000000,
       "end": 7200000
@@ -72,7 +72,7 @@
       "end": 9900000
     },
     {
-      "name": "30m - Amateur",
+      "name": "30m - 业余无线电频段",
       "type": "amateur",
       "start": 10100000,
       "end": 10150000
@@ -90,7 +90,7 @@
       "end": 13800000
     },
     {
-      "name": "20m - Amateur",
+      "name": "20m - 业余无线电频段",
       "type": "amateur",
       "start": 14000000,
       "end": 14350000
@@ -108,13 +108,13 @@
       "end": 17900000
     },
     {
-      "name": "17m - Amateur",
+      "name": "17m - 业余无线电频段",
       "type": "amateur",
       "start": 18068000,
       "end": 18168000
     },
     {
-      "name": "15m - Amateur",
+      "name": "15m - 业余无线电频段",
       "type": "amateur",
       "start": 21000000,
       "end": 21450000
@@ -126,7 +126,7 @@
       "end": 21850000
     },
     {
-      "name": "12m - Amateur",
+      "name": "12m - 业余无线电频段",
       "type": "amateur",
       "start": 24890000,
       "end": 24990000
@@ -144,31 +144,31 @@
       "end": 27410000
     },
     {
-      "name": "10m - Amateur",
+      "name": "10m - 业余无线电频段",
       "type": "amateur",
       "start": 28000000,
       "end": 29700000
     },
     {
-      "name": "8m - Amateur",
+      "name": "8m - 业余无线电频段",
       "type": "amateur",
       "start": 40660000,
       "end": 40690000
     },
     {
-      "name": "6m - Amateur",
+      "name": "6m - 业余无线电频段",
       "type": "amateur",
       "start": 50000000,
       "end": 52000000
     },
     {
-      "name": "4m - Amateur",
+      "name": "4m - 业余无线电频段",
       "type": "amateur",
       "start": 69945000,
       "end": 69955000
     },
     {
-      "name": "4m - Amateur",
+      "name": "4m - 业余无线电频段",
       "type": "amateur",
       "start": 70190000,
       "end": 70412500
@@ -186,7 +186,7 @@
       "end": 138000000
     },
     {
-      "name": "2m - Amateur",
+      "name": "2m - 业余无线电频段",
       "type": "amateur",
       "start": 144000000,
       "end": 146000000
@@ -199,7 +199,7 @@
       "end": 223000000
     },
     {
-      "name": "70cm - Amateur",
+      "name": "70cm - 业余无线电频段",
       "type": "amateur",
       "start": 430000000,
       "end": 440000000
@@ -217,61 +217,61 @@
       "end": 790000000
     },
     {
-      "name": "23cm - Amateur",
+      "name": "23cm - 业余无线电频段",
       "type": "amateur",
       "start": 1240000000,
       "end": 1300000000
     },
     {
-      "name": "13cm - Amateur",
+      "name": "13cm - 业余无线电频段",
       "type": "amateur",
       "start": 2300000000,
       "end": 2450000000
     },
     {
-      "name": "6cm - Amateur",
+      "name": "6cm - 业余无线电频段",
       "type": "amateur",
       "start": 5650000000,
       "end": 5850000000
     },
     {
-      "name": "3cm - Amateur",
+      "name": "3cm - 业余无线电频段",
       "type": "amateur",
       "start": 10000000000,
       "end": 10500000000
     },
     {
-      "name": "1.25cm - Amateur",
+      "name": "1.25cm - 业余无线电频段",
       "type": "amateur",
       "start": 24000000000,
       "end": 24250000000
     },
     {
-      "name": "6mm - Amateur",
+      "name": "6mm - 业余无线电频段",
       "type": "amateur",
       "start": 47000000000,
       "end": 47200000000
     },
     {
-      "name": "4mm - Amateur",
+      "name": "4mm - 业余无线电频段",
       "type": "amateur",
       "start": 75500000000,
       "end": 81000000000
     },
     {
-      "name": "2.5mm - Amateur",
+      "name": "2.5mm - 业余无线电频段",
       "type": "amateur",
       "start": 122250000000,
       "end": 123000000000
     },
     {
-      "name": "2mm - Amateur",
+      "name": "2mm - 业余无线电频段",
       "type": "amateur",
       "start": 142000000000,
       "end": 149000000000
     },
     {
-      "name": "1mm - Amateur",
+      "name": "1mm - 业余无线电频段",
       "type": "amateur",
       "start": 241000000000,
       "end": 250000000000

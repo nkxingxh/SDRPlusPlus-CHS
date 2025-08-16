@@ -54,7 +54,7 @@
             "end": 472000
         },
         {
-            "name": "Amateur",
+            "name": "业余无线电频段",
             "type": "amateur",
             "start": 472000,
             "end": 479000
@@ -84,7 +84,7 @@
             "end": 1800000
         },
         {
-            "name": "Amateur Station",
+            "name": "业余电台",
             "type": "amateur",
             "start": 1800000,
             "end": 1825000
@@ -150,7 +150,7 @@
             "end": 3500000
         },
         {
-            "name": "Amateur Station",
+            "name": "业余电台",
             "type": "amateur",
             "start": 3500000,
             "end": 3550000
@@ -162,7 +162,7 @@
             "end": 3790000
         },
         {
-            "name": "Amateur Station",
+            "name": "业余电台",
             "type": "amateur",
             "start": 3790000,
             "end": 3800000
@@ -252,7 +252,7 @@
             "end": 5730000
         },
         {
-            "name": "Broadcast",
+            "name": "广播",
             "type": "broadcast",
             "start": 5900000,
             "end": 5950000
@@ -264,13 +264,13 @@
             "end": 6200000
         },
         {
-            "name": "Amateur Station",
+            "name": "业余电台",
             "type": "amateur",
             "start": 7000000,
             "end": 7100000
         },
         {
-            "name": "Amateur Station",
+            "name": "业余电台",
             "type": "amateur",
             "start": 7100000,
             "end": 7200000
@@ -288,7 +288,7 @@
             "end": 8005000
         },
         {
-            "name": "Broadcast",
+            "name": "广播",
             "type": "broadcast",
             "start": 9400000,
             "end": 9500000
@@ -306,7 +306,7 @@
             "end": 10005000
         },
         {
-            "name": "Amateur Station",
+            "name": "业余电台",
             "type": "amateur",
             "start": 10100000,
             "end": 10150000
@@ -318,7 +318,7 @@
             "end": 11600000
         },
         {
-            "name": "Broadcast",
+            "name": "广播",
             "type": "broadcast",
             "start": 11600000,
             "end": 11650000
@@ -330,7 +330,7 @@
             "end": 12050000
         },
         {
-            "name": "Broadcast",
+            "name": "广播",
             "type": "broadcast",
             "start": 12050000,
             "end": 12100000
@@ -348,7 +348,7 @@
             "end": 13410000
         },
         {
-            "name": "Broadcast",
+            "name": "广播",
             "type": "broadcast",
             "start": 13570000,
             "end": 13600000
@@ -360,13 +360,13 @@
             "end": 13800000
         },
         {
-            "name": "Broadcast",
+            "name": "广播",
             "type": "broadcast",
             "start": 13800000,
             "end": 13870000
         },
         {
-            "name": "Amateur Station",
+            "name": "业余电台",
             "type": "amateur",
             "start": 14000000,
             "end": 14350000
@@ -402,13 +402,13 @@
             "end": 16005000
         },
         {
-            "name": "Broadcast",
+            "name": "广播",
             "type": "broadcast",
             "start": 18900000,
             "end": 19020000
         },
         {
-            "name": "Amateur Station",
+            "name": "业余电台",
             "type": "amateur",
             "start": 21000000,
             "end": 21450000
@@ -420,7 +420,7 @@
             "end": 21850000
         },
         {
-            "name": "Amateur Station",
+            "name": "业余电台",
             "type": "amateur",
             "start": 24890000,
             "end": 24990000
@@ -432,13 +432,13 @@
             "end": 26100000
         },
         {
-            "name": "Amateur Station",
+            "name": "业余电台",
             "type": "amateur",
             "start": 28000000,
             "end": 29700000
         },
         {
-            "name": "Amateur Station",
+            "name": "业余电台",
             "type": "amateur",
             "start": 50000000,
             "end": 54000000
@@ -480,7 +480,7 @@
             "end": 117975000
         },
         {
-            "name": "Amateur Station",
+            "name": "业余电台",
             "type": "amateur",
             "start": 144000000,
             "end": 146000000
@@ -492,7 +492,7 @@
             "end": 148000000
         },
         {
-            "name": "Low Power Device",
+            "name": "低功率设备",
             "type": "fixed",
             "start": 162037500,
             "end": 174000000
@@ -504,13 +504,13 @@
             "end": 216000000
         },
         {
-            "name": "Low Power Device",
+            "name": "低功率设备",
             "type": "fixed",
             "start": 216000000,
             "end": 230000000
         },
         {
-            "name": "Low Power Device",
+            "name": "低功率设备",
             "type": "fixed",
             "start": 273000000,
             "end": 322000000
@@ -528,7 +528,7 @@
             "end": 806000000
         },
         {
-            "name": "Low Power Device",
+            "name": "低功率设备",
             "type": "fixed",
             "start": 942000000,
             "end": 960000000
