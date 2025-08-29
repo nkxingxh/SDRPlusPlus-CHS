@@ -33,8 +33,16 @@ namespace style {
 // 安卓平台无法使用完整中文字体, 会导致黑块 (FONTS.md `(4) Font atlas texture fails to upload to GPU.`)
 #ifdef __ANDROID__
         baseBuilder.AddRanges(fonts->GetGlyphRangesChineseSimplifiedCommon());
-        // 补充字: 噪、帧、抑、辑、频、馈
-        const ImWchar extraRange[] = {0x566A, 0x566A, 0x5E27, 0x5E27, 0x6291, 0x6291, 0x8F91, 0x8F91, 0x9891, 0x9891, 0x9988, 0x9988, 0};
+        // 补充字
+        const ImWchar extraRange[] = {
+            0x566A, 0x566A, // 噪
+            0x5E27, 0x5E27, // 帧
+            0x6291, 0x6291, // 抑
+            0x8C10, 0x8C10, // 谐
+            0x8F91, 0x8F91, // 辑
+            0x9891, 0x9891, // 频
+            0x9988, 0x9988, // 馈
+        0};
         baseBuilder.AddRanges(extraRange);
 #else
         baseBuilder.AddRanges(fonts->GetGlyphRangesChineseFull());
