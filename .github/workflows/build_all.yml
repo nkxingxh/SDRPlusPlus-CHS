@@ -555,71 +555,71 @@ jobs:
               name: sdrpp_android
               path: ${{runner.workspace}}/sdrpp.apk
 
-    create_full_archive:
-        needs: [
-          'build_windows',
-          'build_macos_intel',
-          'build_macos_arm',
-          'build_debian_bullseye_amd64',
-          'build_debian_bullseye_aarch64',
-          'build_debian_bookworm_amd64',
-          'build_debian_bookworm_aarch64',
-          'build_debian_trixie_amd64',
-          'build_debian_trixie_aarch64',
-          'build_debian_sid_amd64',
-          'build_debian_sid_aarch64',
-          'build_ubuntu_focal_amd64',
-          'build_ubuntu_focal_aarch64',
-          'build_ubuntu_jammy_amd64',
-          'build_ubuntu_jammy_aarch64',
-          'build_ubuntu_noble_amd64',
-          'build_ubuntu_noble_aarch64',
-          'build_android'
-        ]
-        runs-on: ubuntu-latest
+    # create_full_archive:
+    #     needs: [
+    #       'build_windows',
+    #       'build_macos_intel',
+    #       'build_macos_arm',
+    #       'build_debian_bullseye_amd64',
+    #       'build_debian_bullseye_aarch64',
+    #       'build_debian_bookworm_amd64',
+    #       'build_debian_bookworm_aarch64',
+    #       'build_debian_trixie_amd64',
+    #       'build_debian_trixie_aarch64',
+    #       'build_debian_sid_amd64',
+    #       'build_debian_sid_aarch64',
+    #       'build_ubuntu_focal_amd64',
+    #       'build_ubuntu_focal_aarch64',
+    #       'build_ubuntu_jammy_amd64',
+    #       'build_ubuntu_jammy_aarch64',
+    #       'build_ubuntu_noble_amd64',
+    #       'build_ubuntu_noble_aarch64',
+    #       'build_android'
+    #     ]
+    #     runs-on: ubuntu-latest
 
-        steps:
-        - name: Download All Builds
-          uses: actions/download-artifact@v4
+    #     steps:
+    #     - name: Download All Builds
+    #       uses: actions/download-artifact@v4
 
-        - name: Create Archive
-          run: >
-            mkdir sdrpp_all && 
-            mv sdrpp_windows_x64/sdrpp_windows_x64.zip sdrpp_all/ && 
-            mv sdrpp_macos_intel/sdrpp_macos_intel.zip sdrpp_all/ && 
-            mv sdrpp_macos_arm/sdrpp_macos_arm.zip sdrpp_all/ && 
-            mv sdrpp_debian_bullseye_amd64/sdrpp_debian_amd64.deb sdrpp_all/sdrpp_debian_bullseye_amd64.deb &&
-            mv sdrpp_debian_bullseye_aarch64/sdrpp_debian_amd64.deb sdrpp_all/sdrpp_debian_bullseye_aarch64.deb &&
-            mv sdrpp_debian_bookworm_amd64/sdrpp_debian_amd64.deb sdrpp_all/sdrpp_debian_bookworm_amd64.deb && 
-            mv sdrpp_debian_bookworm_aarch64/sdrpp_debian_amd64.deb sdrpp_all/sdrpp_debian_bookworm_aarch64.deb && 
-            mv sdrpp_debian_trixie_amd64/sdrpp_debian_amd64.deb sdrpp_all/sdrpp_debian_trixie_amd64.deb && 
-            mv sdrpp_debian_trixie_aarch64/sdrpp_debian_amd64.deb sdrpp_all/sdrpp_debian_trixie_aarch64.deb && 
-            mv sdrpp_debian_sid_amd64/sdrpp_debian_amd64.deb sdrpp_all/sdrpp_debian_sid_amd64.deb && 
-            mv sdrpp_debian_sid_aarch64/sdrpp_debian_amd64.deb sdrpp_all/sdrpp_debian_sid_aarch64.deb && 
-            mv sdrpp_ubuntu_focal_amd64/sdrpp_debian_amd64.deb sdrpp_all/sdrpp_ubuntu_focal_amd64.deb &&
-            mv sdrpp_ubuntu_focal_aarch64/sdrpp_debian_amd64.deb sdrpp_all/sdrpp_ubuntu_focal_aarch64.deb &&
-            mv sdrpp_ubuntu_jammy_amd64/sdrpp_debian_amd64.deb sdrpp_all/sdrpp_ubuntu_jammy_amd64.deb &&
-            mv sdrpp_ubuntu_jammy_aarch64/sdrpp_debian_amd64.deb sdrpp_all/sdrpp_ubuntu_jammy_aarch64.deb &&
-            mv sdrpp_ubuntu_noble_amd64/sdrpp_debian_amd64.deb sdrpp_all/sdrpp_ubuntu_noble_amd64.deb &&
-            mv sdrpp_ubuntu_noble_aarch64/sdrpp_debian_amd64.deb sdrpp_all/sdrpp_ubuntu_noble_aarch64.deb &&
-            mv sdrpp_android/sdrpp.apk sdrpp_all/sdrpp.apk
+    #     - name: Create Archive
+    #       run: >
+    #         mkdir sdrpp_all && 
+    #         mv sdrpp_windows_x64/sdrpp_windows_x64.zip sdrpp_all/ && 
+    #         mv sdrpp_macos_intel/sdrpp_macos_intel.zip sdrpp_all/ && 
+    #         mv sdrpp_macos_arm/sdrpp_macos_arm.zip sdrpp_all/ && 
+    #         mv sdrpp_debian_bullseye_amd64/sdrpp_debian_amd64.deb sdrpp_all/sdrpp_debian_bullseye_amd64.deb &&
+    #         mv sdrpp_debian_bullseye_aarch64/sdrpp_debian_amd64.deb sdrpp_all/sdrpp_debian_bullseye_aarch64.deb &&
+    #         mv sdrpp_debian_bookworm_amd64/sdrpp_debian_amd64.deb sdrpp_all/sdrpp_debian_bookworm_amd64.deb && 
+    #         mv sdrpp_debian_bookworm_aarch64/sdrpp_debian_amd64.deb sdrpp_all/sdrpp_debian_bookworm_aarch64.deb && 
+    #         mv sdrpp_debian_trixie_amd64/sdrpp_debian_amd64.deb sdrpp_all/sdrpp_debian_trixie_amd64.deb && 
+    #         mv sdrpp_debian_trixie_aarch64/sdrpp_debian_amd64.deb sdrpp_all/sdrpp_debian_trixie_aarch64.deb && 
+    #         mv sdrpp_debian_sid_amd64/sdrpp_debian_amd64.deb sdrpp_all/sdrpp_debian_sid_amd64.deb && 
+    #         mv sdrpp_debian_sid_aarch64/sdrpp_debian_amd64.deb sdrpp_all/sdrpp_debian_sid_aarch64.deb && 
+    #         mv sdrpp_ubuntu_focal_amd64/sdrpp_debian_amd64.deb sdrpp_all/sdrpp_ubuntu_focal_amd64.deb &&
+    #         mv sdrpp_ubuntu_focal_aarch64/sdrpp_debian_amd64.deb sdrpp_all/sdrpp_ubuntu_focal_aarch64.deb &&
+    #         mv sdrpp_ubuntu_jammy_amd64/sdrpp_debian_amd64.deb sdrpp_all/sdrpp_ubuntu_jammy_amd64.deb &&
+    #         mv sdrpp_ubuntu_jammy_aarch64/sdrpp_debian_amd64.deb sdrpp_all/sdrpp_ubuntu_jammy_aarch64.deb &&
+    #         mv sdrpp_ubuntu_noble_amd64/sdrpp_debian_amd64.deb sdrpp_all/sdrpp_ubuntu_noble_amd64.deb &&
+    #         mv sdrpp_ubuntu_noble_aarch64/sdrpp_debian_amd64.deb sdrpp_all/sdrpp_ubuntu_noble_aarch64.deb &&
+    #         mv sdrpp_android/sdrpp.apk sdrpp_all/sdrpp.apk
 
-        - uses: actions/upload-artifact@v4
-          with:
-            name: sdrpp_all
-            path: sdrpp_all/
+    #     - uses: actions/upload-artifact@v4
+    #       with:
+    #         name: sdrpp_all
+    #         path: sdrpp_all/
 
-    update_nightly_release:
-        needs: [create_full_archive]
-        runs-on: ubuntu-latest
-        if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/master' }}
+    # update_nightly_release:
+    #     needs: [create_full_archive]
+    #     runs-on: ubuntu-latest
+    #     if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/master' }}
 
-        steps:
-        - name: Download All Builds
-          uses: actions/download-artifact@v4
+    #     steps:
+    #     - name: Download All Builds
+    #       uses: actions/download-artifact@v4
 
-        - name: Update Nightly
-          run: gh release upload nightly sdrpp_all/* -R ${{github.repository}} --clobber
+    #     - name: Update Nightly
+    #       run: gh release upload nightly sdrpp_all/* -R ${{github.repository}} --clobber
 
     check_spelling:
         runs-on: ubuntu-latest
