@@ -79,9 +79,12 @@ jobs:
         - name: Install libfobos
           run: git clone https://github.com/AlexandreRouma/libfobos ; cd libfobos ; mkdir build ; cd build ; cmake .. -DCMAKE_BUILD_TYPE=Release "-DCMAKE_TOOLCHAIN_FILE=C:/vcpkg/scripts/buildsystems/vcpkg.cmake" ; cmake --build . --config Release ; cmake --install .
 
+        - name: Install libhydrasdr
+          run: git clone https://github.com/hydrasdr/rfone_host; cd rfone_host/ ; mkdir build ; cd build ; cmake .. -DCMAKE_BUILD_TYPE=Release "-DLIBUSB_LIBRARIES=C:\Program Files\PothosSDR\lib\libusb-1.0.lib" "-DLIBUSB_INCLUDE_DIR=C:\Program Files\PothosSDR\include\libusb-1.0" "-DTHREADS_PTHREADS_WIN32_LIBRARY=C:\Program Files\PothosSDR\lib\pthreadVC2.lib" "-DTHREADS_PTHREADS_INCLUDE_DIR=C:\Program Files\PothosSDR\include" ; cmake --build . --config Release ; cmake --install .
+
         - name: Prepare CMake
           working-directory: ${{runner.workspace}}/build
-          run: cmake -DCOPY_MSVC_REDISTRIBUTABLES=ON "$Env:GITHUB_WORKSPACE" "-DCMAKE_TOOLCHAIN_FILE=C:/vcpkg/scripts/buildsystems/vcpkg.cmake" -DOPT_BUILD_BLADERF_SOURCE=ON -DOPT_BUILD_LIMESDR_SOURCE=ON -DOPT_BUILD_PERSEUS_SOURCE=ON -DOPT_BUILD_SDRPLAY_SOURCE=ON -DOPT_BUILD_NEW_PORTAUDIO_SINK=ON -DOPT_BUILD_M17_DECODER=ON -DOPT_BUILD_RFNM_SOURCE=ON -DOPT_BUILD_FOBOSSDR_SOURCE=ON
+          run: cmake -DCOPY_MSVC_REDISTRIBUTABLES=ON "$Env:GITHUB_WORKSPACE" "-DCMAKE_TOOLCHAIN_FILE=C:/vcpkg/scripts/buildsystems/vcpkg.cmake" -DOPT_BUILD_BLADERF_SOURCE=ON -DOPT_BUILD_LIMESDR_SOURCE=ON -DOPT_BUILD_PERSEUS_SOURCE=ON -DOPT_BUILD_SDRPLAY_SOURCE=ON -DOPT_BUILD_NEW_PORTAUDIO_SINK=ON -DOPT_BUILD_M17_DECODER=ON -DOPT_BUILD_RFNM_SOURCE=ON -DOPT_BUILD_FOBOSSDR_SOURCE=ON -DOPT_BUILD_HYDRASDR_SOURCE=ON
 
         - name: Build
           working-directory: ${{runner.workspace}}/build
@@ -98,7 +101,7 @@ jobs:
               path: ${{runner.workspace}}/sdrpp_windows_x64.zip
 
     # build_macos_intel:
-    #     runs-on: macos-13
+    #     runs-on: macos-15-intel
 
     #     steps:
     #     - uses: actions/checkout@v4
@@ -119,7 +122,7 @@ jobs:
     #       run: wget https://github.com/analogdevicesinc/libiio/archive/refs/tags/v0.25.zip && 7z x v0.25.zip && cd libiio-0.25 && mkdir build && cd build && cmake -DCMAKE_OSX_DEPLOYMENT_TARGET=10.15 -DCMAKE_BUILD_TYPE=Release .. && make -j3 && sudo make install && cd ../../
 
     #     - name: Install libad9361
-    #       run: git clone https://github.com/analogdevicesinc/libad9361-iio && cd libad9361-iio && mkdir build && cd build && cmake -DCMAKE_OSX_DEPLOYMENT_TARGET=10.15 -DCMAKE_BUILD_TYPE=Release .. && make -j3 && sudo make install && cd ../../
+    #       run: git clone https://github.com/analogdevicesinc/libad9361-iio && cd libad9361-iio && mkdir build && cd build && cmake -DCMAKE_OSX_DEPLOYMENT_TARGET=10.15 -DCMAKE_BUILD_TYPE=Release -DCMAKE_POLICY_VERSION_MINIMUM=3.5 .. && make -j3 && sudo make install && cd ../../
 
     #     - name: Install LimeSuite
     #       run: git clone https://github.com/myriadrf/LimeSuite && cd LimeSuite && mkdir builddir && cd builddir && cmake -DCMAKE_OSX_DEPLOYMENT_TARGET=10.15 -DCMAKE_BUILD_TYPE=Release .. && make -j3 && sudo make install && cd ../../
@@ -141,7 +144,7 @@ jobs:
 
     #     - name: Prepare CMake
     #       working-directory: ${{runner.workspace}}/build
-    #       run: cmake -DCMAKE_OSX_DEPLOYMENT_TARGET=10.15 $GITHUB_WORKSPACE -DOPT_BUILD_PLUTOSDR_SOURCE=ON -DOPT_BUILD_BLADERF_SOURCE=ON -DOPT_BUILD_SDRPLAY_SOURCE=ON -DOPT_BUILD_LIMESDR_SOURCE=ON -DOPT_BUILD_AUDIO_SINK=OFF -DOPT_BUILD_PORTAUDIO_SINK=ON -DOPT_BUILD_NEW_PORTAUDIO_SINK=ON -DOPT_BUILD_M17_DECODER=ON -DOPT_BUILD_PERSEUS_SOURCE=ON -DOPT_BUILD_AUDIO_SOURCE=OFF -DOPT_BUILD_RFNM_SOURCE=ON -DOPT_BUILD_FOBOSSDR_SOURCE=ON -DUSE_BUNDLE_DEFAULTS=ON -DCMAKE_BUILD_TYPE=Release
+    #       run: cmake -DCMAKE_POLICY_VERSION_MINIMUM=3.5 -DCMAKE_OSX_DEPLOYMENT_TARGET=10.15 $GITHUB_WORKSPACE -DOPT_BUILD_PLUTOSDR_SOURCE=ON -DOPT_BUILD_BLADERF_SOURCE=ON -DOPT_BUILD_SDRPLAY_SOURCE=ON -DOPT_BUILD_LIMESDR_SOURCE=ON -DOPT_BUILD_AUDIO_SINK=OFF -DOPT_BUILD_PORTAUDIO_SINK=ON -DOPT_BUILD_NEW_PORTAUDIO_SINK=ON -DOPT_BUILD_M17_DECODER=ON -DOPT_BUILD_PERSEUS_SOURCE=ON -DOPT_BUILD_AUDIO_SOURCE=OFF -DOPT_BUILD_RFNM_SOURCE=ON -DOPT_BUILD_FOBOSSDR_SOURCE=ON  -DOPT_BUILD_HYDRASDR_SOURCE=ON -DUSE_BUNDLE_DEFAULTS=ON -DCMAKE_BUILD_TYPE=Release
 
     #     - name: Build
     #       working-directory: ${{runner.workspace}}/build
@@ -158,7 +161,7 @@ jobs:
     #           path: ${{runner.workspace}}/sdrpp_macos_intel.zip
 
     # build_macos_arm:
-    #     runs-on: macos-14
+    #     runs-on: macos-15
 
     #     steps:
     #     - uses: actions/checkout@v4
@@ -179,7 +182,7 @@ jobs:
     #       run: wget https://github.com/analogdevicesinc/libiio/archive/refs/tags/v0.25.zip && 7z x v0.25.zip && cd libiio-0.25 && mkdir build && cd build && cmake -DCMAKE_OSX_DEPLOYMENT_TARGET=10.15 -DCMAKE_BUILD_TYPE=Release .. && make -j3 && sudo make install && cd ../../
 
     #     - name: Install libad9361
-    #       run: git clone https://github.com/analogdevicesinc/libad9361-iio && cd libad9361-iio && mkdir build && cd build && cmake -DCMAKE_OSX_DEPLOYMENT_TARGET=10.15 -DCMAKE_BUILD_TYPE=Release .. && make -j3 && sudo make install && cd ../../
+    #       run: git clone https://github.com/analogdevicesinc/libad9361-iio && cd libad9361-iio && mkdir build && cd build && cmake -DCMAKE_OSX_DEPLOYMENT_TARGET=10.15 -DCMAKE_BUILD_TYPE=Release -DCMAKE_POLICY_VERSION_MINIMUM=3.5 .. && make -j3 && sudo make install && cd ../../
 
     #     - name: Install LimeSuite
     #       run: git clone https://github.com/myriadrf/LimeSuite && cd LimeSuite && mkdir builddir && cd builddir && cmake -DCMAKE_OSX_DEPLOYMENT_TARGET=10.15 -DCMAKE_BUILD_TYPE=Release .. && make -j3 && sudo make install && cd ../../
@@ -201,7 +204,7 @@ jobs:
 
     #     - name: Prepare CMake
     #       working-directory: ${{runner.workspace}}/build
-    #       run: cmake -DCMAKE_OSX_DEPLOYMENT_TARGET=10.15 $GITHUB_WORKSPACE -DOPT_BUILD_PLUTOSDR_SOURCE=ON -DOPT_BUILD_BLADERF_SOURCE=ON -DOPT_BUILD_SDRPLAY_SOURCE=ON -DOPT_BUILD_LIMESDR_SOURCE=ON -DOPT_BUILD_AUDIO_SINK=OFF -DOPT_BUILD_PORTAUDIO_SINK=ON -DOPT_BUILD_NEW_PORTAUDIO_SINK=ON -DOPT_BUILD_M17_DECODER=OFF -DOPT_BUILD_PERSEUS_SOURCE=OFF -DOPT_BUILD_AUDIO_SOURCE=OFF -DOPT_BUILD_RFNM_SOURCE=ON -DOPT_BUILD_FOBOSSDR_SOURCE=ON -DUSE_BUNDLE_DEFAULTS=ON -DCMAKE_BUILD_TYPE=Release
+    #       run: cmake -DCMAKE_POLICY_VERSION_MINIMUM=3.5 -DCMAKE_OSX_DEPLOYMENT_TARGET=10.15 $GITHUB_WORKSPACE -DOPT_BUILD_PLUTOSDR_SOURCE=ON -DOPT_BUILD_BLADERF_SOURCE=ON -DOPT_BUILD_SDRPLAY_SOURCE=ON -DOPT_BUILD_LIMESDR_SOURCE=ON -DOPT_BUILD_AUDIO_SINK=OFF -DOPT_BUILD_PORTAUDIO_SINK=ON -DOPT_BUILD_NEW_PORTAUDIO_SINK=ON -DOPT_BUILD_M17_DECODER=OFF -DOPT_BUILD_PERSEUS_SOURCE=OFF -DOPT_BUILD_AUDIO_SOURCE=OFF -DOPT_BUILD_RFNM_SOURCE=ON -DOPT_BUILD_FOBOSSDR_SOURCE=ON -DOPT_BUILD_HYDRASDR_SOURCE=ON -DUSE_BUNDLE_DEFAULTS=ON -DCMAKE_BUILD_TYPE=Release
 
     #     - name: Build
     #       working-directory: ${{runner.workspace}}/build
@@ -525,50 +528,6 @@ jobs:
     #           name: sdrpp_ubuntu_noble_aarch64
     #           path: ${{runner.workspace}}/sdrpp_debian_amd64.deb
 
-    # build_ubuntu_oracular_amd64:
-    #     runs-on: ubuntu-latest
-
-    #     steps:
-    #     - uses: actions/checkout@v4
-        
-    #     - name: Create Docker Image
-    #       run: cd $GITHUB_WORKSPACE/docker_builds/ubuntu_oracular && docker build . --tag sdrpp_build
-
-    #     - name: Run Container
-    #       run: docker run --name build -v $GITHUB_WORKSPACE:/root/SDRPlusPlus --env BUILD_NO="-$GITHUB_RUN_NUMBER" sdrpp_build /root/do_build.sh
-
-    #     - name: Recover Deb Archive
-    #       working-directory: ${{runner.workspace}}
-    #       run: docker cp build:/root/SDRPlusPlus/sdrpp_debian_amd64.deb ./
-
-    #     - name: Save Deb Archive
-    #       uses: actions/upload-artifact@v4
-    #       with:
-    #           name: sdrpp_ubuntu_oracular_amd64
-    #           path: ${{runner.workspace}}/sdrpp_debian_amd64.deb
-
-    # build_ubuntu_oracular_aarch64:
-    #     runs-on: ubuntu-24.04-arm
-
-    #     steps:
-    #     - uses: actions/checkout@v4
-        
-    #     - name: Create Docker Image
-    #       run: cd $GITHUB_WORKSPACE/docker_builds/ubuntu_oracular && docker build . --tag sdrpp_build
-
-    #     - name: Run Container
-    #       run: docker run --name build -v $GITHUB_WORKSPACE:/root/SDRPlusPlus --env BUILD_NO="-$GITHUB_RUN_NUMBER" sdrpp_build /root/do_build.sh
-
-    #     - name: Recover Deb Archive
-    #       working-directory: ${{runner.workspace}}
-    #       run: docker cp build:/root/SDRPlusPlus/sdrpp_debian_amd64.deb ./
-
-    #     - name: Save Deb Archive
-    #       uses: actions/upload-artifact@v4
-    #       with:
-    #           name: sdrpp_ubuntu_oracular_aarch64
-    #           path: ${{runner.workspace}}/sdrpp_debian_amd64.deb
-
     build_android:
         runs-on: ubuntu-latest
 
@@ -596,75 +555,71 @@ jobs:
               name: sdrpp_android
               path: ${{runner.workspace}}/sdrpp.apk
 
-    # create_full_archive:
-    #     needs: [
-    #       'build_windows',
-    #       'build_macos_intel',
-    #       'build_macos_arm',
-    #       'build_debian_bullseye_amd64',
-    #       'build_debian_bullseye_aarch64',
-    #       'build_debian_bookworm_amd64',
-    #       'build_debian_bookworm_aarch64',
-    #       'build_debian_trixie_amd64',
-    #       'build_debian_trixie_aarch64',
-    #       'build_debian_sid_amd64',
-    #       'build_debian_sid_aarch64',
-    #       'build_ubuntu_focal_amd64',
-    #       'build_ubuntu_focal_aarch64',
-    #       'build_ubuntu_jammy_amd64',
-    #       'build_ubuntu_jammy_aarch64',
-    #       'build_ubuntu_noble_amd64',
-    #       'build_ubuntu_noble_aarch64',
-    #       'build_ubuntu_oracular_amd64',
-    #       'build_ubuntu_oracular_aarch64',
-    #       'build_android'
-    #     ]
-    #     runs-on: ubuntu-latest
+    create_full_archive:
+        needs: [
+          'build_windows',
+          'build_macos_intel',
+          'build_macos_arm',
+          'build_debian_bullseye_amd64',
+          'build_debian_bullseye_aarch64',
+          'build_debian_bookworm_amd64',
+          'build_debian_bookworm_aarch64',
+          'build_debian_trixie_amd64',
+          'build_debian_trixie_aarch64',
+          'build_debian_sid_amd64',
+          'build_debian_sid_aarch64',
+          'build_ubuntu_focal_amd64',
+          'build_ubuntu_focal_aarch64',
+          'build_ubuntu_jammy_amd64',
+          'build_ubuntu_jammy_aarch64',
+          'build_ubuntu_noble_amd64',
+          'build_ubuntu_noble_aarch64',
+          'build_android'
+        ]
+        runs-on: ubuntu-latest
 
-    #     steps:
-    #     - name: Download All Builds
-    #       uses: actions/download-artifact@v4
+        steps:
+        - name: Download All Builds
+          uses: actions/download-artifact@v4
 
-    #     - name: Create Archive
-    #       run: >
-    #         mkdir sdrpp_all && 
-    #         mv sdrpp_windows_x64/sdrpp_windows_x64.zip sdrpp_all/ && 
-    #         mv sdrpp_macos_intel/sdrpp_macos_intel.zip sdrpp_all/ && 
-    #         mv sdrpp_macos_arm/sdrpp_macos_arm.zip sdrpp_all/ && 
-    #         mv sdrpp_debian_bullseye_amd64/sdrpp_debian_amd64.deb sdrpp_all/sdrpp_debian_bullseye_amd64.deb &&
-    #         mv sdrpp_debian_bullseye_aarch64/sdrpp_debian_amd64.deb sdrpp_all/sdrpp_debian_bullseye_aarch64.deb &&
-    #         mv sdrpp_debian_bookworm_amd64/sdrpp_debian_amd64.deb sdrpp_all/sdrpp_debian_bookworm_amd64.deb && 
-    #         mv sdrpp_debian_bookworm_aarch64/sdrpp_debian_amd64.deb sdrpp_all/sdrpp_debian_bookworm_aarch64.deb && 
-    #         mv sdrpp_debian_trixie_amd64/sdrpp_debian_amd64.deb sdrpp_all/sdrpp_debian_trixie_amd64.deb && 
-    #         mv sdrpp_debian_trixie_aarch64/sdrpp_debian_amd64.deb sdrpp_all/sdrpp_debian_trixie_aarch64.deb && 
-    #         mv sdrpp_debian_sid_amd64/sdrpp_debian_amd64.deb sdrpp_all/sdrpp_debian_sid_amd64.deb && 
-    #         mv sdrpp_debian_sid_aarch64/sdrpp_debian_amd64.deb sdrpp_all/sdrpp_debian_sid_aarch64.deb && 
-    #         mv sdrpp_ubuntu_focal_amd64/sdrpp_debian_amd64.deb sdrpp_all/sdrpp_ubuntu_focal_amd64.deb &&
-    #         mv sdrpp_ubuntu_focal_aarch64/sdrpp_debian_amd64.deb sdrpp_all/sdrpp_ubuntu_focal_aarch64.deb &&
-    #         mv sdrpp_ubuntu_jammy_amd64/sdrpp_debian_amd64.deb sdrpp_all/sdrpp_ubuntu_jammy_amd64.deb &&
-    #         mv sdrpp_ubuntu_jammy_aarch64/sdrpp_debian_amd64.deb sdrpp_all/sdrpp_ubuntu_jammy_aarch64.deb &&
-    #         mv sdrpp_ubuntu_noble_amd64/sdrpp_debian_amd64.deb sdrpp_all/sdrpp_ubuntu_noble_amd64.deb &&
-    #         mv sdrpp_ubuntu_noble_aarch64/sdrpp_debian_amd64.deb sdrpp_all/sdrpp_ubuntu_noble_aarch64.deb &&
-    #         mv sdrpp_ubuntu_oracular_amd64/sdrpp_debian_amd64.deb sdrpp_all/sdrpp_ubuntu_oracular_amd64.deb &&
-    #         mv sdrpp_ubuntu_oracular_aarch64/sdrpp_debian_amd64.deb sdrpp_all/sdrpp_ubuntu_oracular_aarch64.deb &&
-    #         mv sdrpp_android/sdrpp.apk sdrpp_all/sdrpp.apk
+        - name: Create Archive
+          run: >
+            mkdir sdrpp_all && 
+            mv sdrpp_windows_x64/sdrpp_windows_x64.zip sdrpp_all/ && 
+            mv sdrpp_macos_intel/sdrpp_macos_intel.zip sdrpp_all/ && 
+            mv sdrpp_macos_arm/sdrpp_macos_arm.zip sdrpp_all/ && 
+            mv sdrpp_debian_bullseye_amd64/sdrpp_debian_amd64.deb sdrpp_all/sdrpp_debian_bullseye_amd64.deb &&
+            mv sdrpp_debian_bullseye_aarch64/sdrpp_debian_amd64.deb sdrpp_all/sdrpp_debian_bullseye_aarch64.deb &&
+            mv sdrpp_debian_bookworm_amd64/sdrpp_debian_amd64.deb sdrpp_all/sdrpp_debian_bookworm_amd64.deb && 
+            mv sdrpp_debian_bookworm_aarch64/sdrpp_debian_amd64.deb sdrpp_all/sdrpp_debian_bookworm_aarch64.deb && 
+            mv sdrpp_debian_trixie_amd64/sdrpp_debian_amd64.deb sdrpp_all/sdrpp_debian_trixie_amd64.deb && 
+            mv sdrpp_debian_trixie_aarch64/sdrpp_debian_amd64.deb sdrpp_all/sdrpp_debian_trixie_aarch64.deb && 
+            mv sdrpp_debian_sid_amd64/sdrpp_debian_amd64.deb sdrpp_all/sdrpp_debian_sid_amd64.deb && 
+            mv sdrpp_debian_sid_aarch64/sdrpp_debian_amd64.deb sdrpp_all/sdrpp_debian_sid_aarch64.deb && 
+            mv sdrpp_ubuntu_focal_amd64/sdrpp_debian_amd64.deb sdrpp_all/sdrpp_ubuntu_focal_amd64.deb &&
+            mv sdrpp_ubuntu_focal_aarch64/sdrpp_debian_amd64.deb sdrpp_all/sdrpp_ubuntu_focal_aarch64.deb &&
+            mv sdrpp_ubuntu_jammy_amd64/sdrpp_debian_amd64.deb sdrpp_all/sdrpp_ubuntu_jammy_amd64.deb &&
+            mv sdrpp_ubuntu_jammy_aarch64/sdrpp_debian_amd64.deb sdrpp_all/sdrpp_ubuntu_jammy_aarch64.deb &&
+            mv sdrpp_ubuntu_noble_amd64/sdrpp_debian_amd64.deb sdrpp_all/sdrpp_ubuntu_noble_amd64.deb &&
+            mv sdrpp_ubuntu_noble_aarch64/sdrpp_debian_amd64.deb sdrpp_all/sdrpp_ubuntu_noble_aarch64.deb &&
+            mv sdrpp_android/sdrpp.apk sdrpp_all/sdrpp.apk
 
-    #     - uses: actions/upload-artifact@v4
-    #       with:
-    #         name: sdrpp_all
-    #         path: sdrpp_all/
+        - uses: actions/upload-artifact@v4
+          with:
+            name: sdrpp_all
+            path: sdrpp_all/
 
-    # update_nightly_release:
-    #     needs: [create_full_archive]
-    #     runs-on: ubuntu-latest
-    #     if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/master' }}
+    update_nightly_release:
+        needs: [create_full_archive]
+        runs-on: ubuntu-latest
+        if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/master' }}
 
-    #     steps:
-    #     - name: Download All Builds
-    #       uses: actions/download-artifact@v4
+        steps:
+        - name: Download All Builds
+          uses: actions/download-artifact@v4
 
-    #     - name: Update Nightly
-    #       run: gh release upload nightly sdrpp_all/* -R ${{github.repository}} --clobber
+        - name: Update Nightly
+          run: gh release upload nightly sdrpp_all/* -R ${{github.repository}} --clobber
 
     check_spelling:
         runs-on: ubuntu-latest

@@ -95,14 +95,12 @@ public:
 #else
         // Check for device presence
         int vid, pid;
-        devFd = backend::getDeviceFD(vid, pid, backend::AIRSPY_VIDPIDS);
+        devFd = backend::getDeviceFD(vid, pid, backend::HYDRASDR_VIDPIDS);
         if (devFd < 0) { return; }
 
         // Get device info
         std::string fakeName = "HydraSDR USB";
-        devList.push_back(0xDEADBEEF);
-        devListTxt += fakeName;
-        devListTxt += '\0';
+        devices.define(fakeName, 0);
 #endif
     }
 
