@@ -226,7 +226,7 @@ private:
 
         // Deemphasis mode
         if (_this->deempAllowed) {
-            ImGui::LeftLabel("De-emphasis");
+            ImGui::LeftLabel("De-emphasis (去加重)");
             ImGui::SetNextItemWidth(menuWidth - ImGui::GetCursorPosX());
             if (ImGui::Combo(("##_radio_wfm_deemp_" + _this->name).c_str(), &_this->deempId, _this->deempModes.txt)) {
                 _this->setDeemphasisMode(_this->deempModes[_this->deempId]);
@@ -235,7 +235,7 @@ private:
 
         // Noise blanker
         if (_this->nbAllowed) {
-            if (ImGui::Checkbox(("Noise blanker (W.I.P.)##_radio_nb_ena_" + _this->name).c_str(), &_this->nbEnabled)) {
+            if (ImGui::Checkbox(("降噪 (半成品)##_radio_nb_ena_" + _this->name).c_str(), &_this->nbEnabled)) {
                 _this->setNBEnabled(_this->nbEnabled);
             }
             if (!_this->nbEnabled && _this->enabled) { style::beginDisabled(); }

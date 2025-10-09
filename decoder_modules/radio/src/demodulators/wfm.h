@@ -30,8 +30,8 @@ namespace demod {
             _config = config;
 
             // Define RDS regions
-            rdsRegions.define("eu", "Europe", RDS_REGION_EUROPE);
-            rdsRegions.define("na", "North America", RDS_REGION_NORTH_AMERICA);
+            rdsRegions.define("eu", "欧洲", RDS_REGION_EUROPE);
+            rdsRegions.define("na", "北美", RDS_REGION_NORTH_AMERICA);
 
             // Register FFT draw handler
             fftRedrawHandler.handler = fftRedraw;

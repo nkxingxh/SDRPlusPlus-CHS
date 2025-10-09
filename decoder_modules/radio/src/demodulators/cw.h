@@ -59,7 +59,7 @@ namespace demod {
                 _config->conf[name][getName()]["agcDecay"] = agcDecay;
                 _config->release(true);
             }
-            ImGui::LeftLabel("Tone Frequency");
+            ImGui::LeftLabel("音调频率");
             ImGui::FillWidth();
             if (ImGui::InputInt(("立体声##_radio_cw_tone_" + name).c_str(), &tone, 10, 100)) {
                 tone = std::clamp<int>(tone, 250, 1250);

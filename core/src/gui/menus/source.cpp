@@ -348,7 +348,7 @@ namespace sourcemenu {
         // Offset add diaglog
         if (showAddOffsetDialog) { showAddOffsetDialog = addOffsetDialog(); }
 
-        ImGui::LeftLabel("Offset");
+        ImGui::LeftLabel("偏移量");
         ImGui::FillWidth();
         if (offsetId == OFFSET_ID_MANUAL) {
             if (ImGui::InputDouble("##freq_offset", &manualOffset, 1.0, 100.0)) {
