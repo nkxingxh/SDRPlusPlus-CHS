@@ -37,13 +37,13 @@ namespace demod {
         void stop() { demod.stop(); }
 
         void showMenu() {
-            if (ImGui::Checkbox(("低通##_radio_wfm_lowpass_" + name).c_str(), &_lowPass)) {
+            if (ImGui::Checkbox(("低通滤波器 (带宽/2)##_radio_wfm_lowpass_" + name).c_str(), &_lowPass)) {
                 demod.setLowPass(_lowPass);
                 _config->acquire();
                 _config->conf[name][getName()]["lowPass"] = _lowPass;
                 _config->release(true);
             }
-            if (ImGui::Checkbox(("高通##_radio_wfm_highpass_" + name).c_str(), &_highPass)) {
+            if (ImGui::Checkbox(("高通滤波器 (300Hz)##_radio_wfm_highpass_" + name).c_str(), &_highPass)) {
                 demod.setHighPass(_highPass);
                 _config->acquire();
                 _config->conf[name][getName()]["highPass"] = _highPass;
