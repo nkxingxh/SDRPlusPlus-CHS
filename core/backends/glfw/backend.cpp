@@ -87,7 +87,7 @@ namespace backend {
 
         // Create window with graphics context
         monitor = glfwGetPrimaryMonitor();
-        window = glfwCreateWindow(winWidth, winHeight, "SDR++ 简体中文 v" VERSION_STR " (构建于 " __TIME__ ", " __DATE__ ")", NULL, NULL);
+        window = glfwCreateWindow(winWidth, winHeight, "SDR++ 简体中文 v" VERSION_STR " (构建于 " __TIME__ ", " __DATE__ ") 由 NKXingXh (BG5JRE) 翻译", NULL, NULL);
         if (window == NULL)
             return 1;
         glfwMakeContextCurrent(window);
@@ -105,7 +105,7 @@ namespace backend {
             
             // Create window with graphics context
             monitor = glfwGetPrimaryMonitor();
-            window = glfwCreateWindow(winWidth, winHeight, "SDR++ 简体中文 v" VERSION_STR " (构建于 " __TIME__ ", " __DATE__ ")", NULL, NULL);
+            window = glfwCreateWindow(winWidth, winHeight, "SDR++ 简体中文 v" VERSION_STR " (构建于 " __TIME__ ", " __DATE__ ") 由 NKXingXh (BG5JRE) 翻译", NULL, NULL);
             if (window == NULL) {
                 flog::info("OpenGL {0}.{1} {2}was not supported", OPENGL_VERSIONS_MAJOR[i], OPENGL_VERSIONS_MINOR[i], OPENGL_VERSIONS_IS_ES[i] ? "ES " : "");
                 continue;

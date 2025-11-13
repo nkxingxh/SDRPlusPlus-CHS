@@ -42,7 +42,7 @@ public:
     RecorderModule(std::string name) : folderSelect("%ROOT%/recordings") {
         this->name = name;
         root = (std::string)core::args["root"];
-        strcpy(nameTemplate, "$t_$f_$h-$m-$s_$d-$M-$y");
+        strcpy(nameTemplate, "$y-$M-$d_$h-$m-$s_$t_$f");
 
         // Define option lists
         containers.define("WAV", wav::FORMAT_WAV);
