@@ -42,6 +42,11 @@ namespace style {
             0x8F91, 0x8F91, // 辑
             0x9891, 0x9891, // 频
             0x9988, 0x9988, // 馈
+            0x7011, 0x7011, // 瀑
+            0x4FC4, 0x4FC4, // 俄
+            0x5C14, 0x5C14, // 尔
+            0x6FB3, 0x6FB3, // 澳
+            0x6D1B, 0x6D1B, // 洛
         0};
         baseBuilder.AddRanges(extraRange);
 #else
