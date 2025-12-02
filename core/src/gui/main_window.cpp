@@ -29,7 +29,7 @@
 #include <gui/tuner.h>
 
 void MainWindow::init() {
-    LoadingScreen::show("Initializing UI");
+    LoadingScreen::show("正在初始化用户界面");
     gui::waterfall.init();
     gui::waterfall.setRawFFTSize(fftSize);
 
@@ -105,8 +105,8 @@ void MainWindow::init() {
                 continue;
             }
             if (!file.is_regular_file()) { continue; }
-            flog::info("Loading {0}", path);
-            LoadingScreen::show("Loading " + file.path().filename().string());
+            flog::info("正在加载 {0}", path);
+            LoadingScreen::show("正在加载 " + file.path().filename().string());
             core::moduleManager.loadModule(path);
         }
     }
@@ -124,8 +124,8 @@ void MainWindow::init() {
     for (auto const& path : modules) {
 #ifndef __ANDROID__
         std::string apath = std::filesystem::absolute(path).string();
-        flog::info("Loading {0}", apath);
-        LoadingScreen::show("Loading " + std::filesystem::path(path).filename().string());
+        flog::info("正在加载 {0}", apath);
+        LoadingScreen::show("正在加载 " + std::filesystem::path(path).filename().string());
         core::moduleManager.loadModule(apath);
 #else
         core::moduleManager.loadModule(path);
@@ -136,20 +136,20 @@ void MainWindow::init() {
     for (auto const& [name, _module] : modList) {
         std::string mod = _module["module"];
         bool enabled = _module["enabled"];
-        flog::info("Initializing {0} ({1})", name, mod);
-        LoadingScreen::show("Initializing " + name + " (" + mod + ")");
+        flog::info("初始化 {0} ({1})", name, mod);
+        LoadingScreen::show("初始化 " + name + " (" + mod + ")");
         core::moduleManager.createInstance(name, mod);
         if (!enabled) { core::moduleManager.disableInstance(name); }
     }
 
     // Load color maps
-    LoadingScreen::show("Loading color maps");
-    flog::info("Loading color maps");
+    LoadingScreen::show("正在加载频段颜色映射");
+    flog::info("正在加载频段颜色映射");
     if (std::filesystem::is_directory(resourcesDir + "/colormaps")) {
         for (const auto& file : std::filesystem::directory_iterator(resourcesDir + "/colormaps")) {
             std::string path = file.path().generic_string();
-            LoadingScreen::show("Loading " + file.path().filename().string());
-            flog::info("Loading {0}", path);
+            LoadingScreen::show("正在加载 " + file.path().filename().string());
+            flog::info("正在加载 {0}", path);
             if (file.path().extension().generic_string() != ".json") {
                 continue;
             }
@@ -174,7 +174,7 @@ void MainWindow::init() {
     // Fix gain not updated on startup, soapysdr
 
     // Update UI settings
-    LoadingScreen::show("Loading configuration");
+    LoadingScreen::show("正在加载配置");
     core::configManager.acquire();
     fftMin = core::configManager.conf["min"];
     fftMax = core::configManager.conf["max"];
