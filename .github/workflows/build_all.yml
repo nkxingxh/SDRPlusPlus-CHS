@@ -534,6 +534,53 @@ jobs:
               name: sdrpp_ubuntu_noble_aarch64
               path: ${{runner.workspace}}/sdrpp_debian_amd64.deb
 
+
+
+    build_ubuntu_resolute_amd64:
+        runs-on: ubuntu-latest
+
+        steps:
+        - uses: actions/checkout@v4
+        
+        - name: Create Docker Image
+          run: cd $GITHUB_WORKSPACE/docker_builds/ubuntu_resolute && docker build . --tag sdrpp_build
+
+        - name: Run Container
+          run: docker run --name build -v $GITHUB_WORKSPACE:/root/SDRPlusPlus --env BUILD_NO="-$GITHUB_RUN_NUMBER" sdrpp_build /root/do_build.sh
+
+        - name: Recover Deb Archive
+          working-directory: ${{runner.workspace}}
+          run: docker cp build:/root/SDRPlusPlus/sdrpp_debian_amd64.deb ./
+
+        - name: Save Deb Archive
+          uses: actions/upload-artifact@v4
+          with:
+              name: sdrpp_ubuntu_resolute_amd64
+              path: ${{runner.workspace}}/sdrpp_debian_amd64.deb
+
+    build_ubuntu_resolute_aarch64:
+        runs-on: ubuntu-24.04-arm
+
+        steps:
+        - uses: actions/checkout@v4
+        
+        - name: Create Docker Image
+          run: cd $GITHUB_WORKSPACE/docker_builds/ubuntu_resolute && docker build . --tag sdrpp_build
+
+        - name: Run Container
+          run: docker run --name build -v $GITHUB_WORKSPACE:/root/SDRPlusPlus --env BUILD_NO="-$GITHUB_RUN_NUMBER" sdrpp_build /root/do_build.sh
+
+        - name: Recover Deb Archive
+          working-directory: ${{runner.workspace}}
+          run: docker cp build:/root/SDRPlusPlus/sdrpp_debian_amd64.deb ./
+
+        - name: Save Deb Archive
+          uses: actions/upload-artifact@v4
+          with:
+              name: sdrpp_ubuntu_resolute_aarch64
+              path: ${{runner.workspace}}/sdrpp_debian_amd64.deb
+  
+
     build_android:
         runs-on: ubuntu-latest
 
@@ -580,6 +627,8 @@ jobs:
           'build_ubuntu_jammy_aarch64',
           'build_ubuntu_noble_amd64',
           'build_ubuntu_noble_aarch64',
+          'build_ubuntu_resolute_amd64',
+          'build_ubuntu_resolute_aarch64',
           'build_android'
         ]
         runs-on: ubuntu-latest
@@ -608,6 +657,8 @@ jobs:
             mv sdrpp_ubuntu_jammy_aarch64/sdrpp_debian_amd64.deb sdrpp_all/sdrpp_ubuntu_jammy_aarch64.deb &&
             mv sdrpp_ubuntu_noble_amd64/sdrpp_debian_amd64.deb sdrpp_all/sdrpp_ubuntu_noble_amd64.deb &&
             mv sdrpp_ubuntu_noble_aarch64/sdrpp_debian_amd64.deb sdrpp_all/sdrpp_ubuntu_noble_aarch64.deb &&
+            mv sdrpp_ubuntu_resolute_amd64/sdrpp_debian_amd64.deb sdrpp_all/sdrpp_ubuntu_resolute_amd64.deb &&
+            mv sdrpp_ubuntu_resolute_aarch64/sdrpp_debian_amd64.deb sdrpp_all/sdrpp_ubuntu_resolute_aarch64.deb &&
             mv sdrpp_android/sdrpp.apk sdrpp_all/sdrpp.apk
 
         - uses: actions/upload-artifact@v4

@@ -49,6 +49,8 @@ SDR++ 是一款跨平台且开源的软件定义无线电 (SDR) 软件，其设�
 
 ### Debian-based (Ubuntu, Mint, etc)
 
+**Warning: DO NOT** use the `sdrpp` package from the package manager. The package is incompete and incompatible with all official and out-of-tree modules.
+
 Download the latest release from [the Releases page](https://github.com/AlexandreRouma/SDRPlusPlus/releases) and extract to the directory of your choice.
 
 Then, use apt to install it:
@@ -289,13 +291,9 @@ Make sure to install portaudio as it'll be needed later.
 An example install command would be:
 
 ```sh
-brew install libusb fftw glfw airspy airspyhf portaudio hackrf rtl-sdr libbladerf codec2 zstd
+brew install libusb fftw glfw airspy airspyhf portaudio hackrf rtl-sdr libbladerf codec2 zstd volk
 pip3 install mako
 ```
-
-### Install volk
-
-You will need to install volk from source. Follow the instructions on their repository. On M1 there are a few more manipulations needed.
 
 ## Build
 
